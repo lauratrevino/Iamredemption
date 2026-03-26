@@ -12,6 +12,7 @@ body {
   background: var(--off-black); color: var(--cream);
   line-height: 1.6; font-size: 16px;
   overflow-x: hidden; padding-bottom: 64px;
+  margin-top: 0;
 }
 
 /* ── ANIMATIONS ── */
@@ -105,15 +106,15 @@ nav#top-nav {
 /* ── HERO (home) ── */
 .hero {
   position: relative; min-height: 100vh;
-  display: flex; flex-direction: column; justify-content: flex-end;
-  padding: 0 2.5rem 5rem; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 100px 2.5rem 4rem; overflow: hidden;
 }
 .hero-bg {
   position: absolute; inset: 0;
   background-image: url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/a8337b04-69d4-4ddd-85ae-4023f42040be/454457859_1181241769877982_4024960473457995510_n.jpg');
-  background-size: cover; background-position: center top; filter: brightness(0.32);
+  background-size: cover; background-position: center top; filter: brightness(0.15);
 }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--off-black) 0%, rgba(10,10,10,0.25) 45%, transparent 100%); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,0.98) 0%, rgba(10,10,10,0.85) 30%, rgba(10,10,10,0.4) 60%, rgba(10,10,10,0.15) 100%); }
 .hero-content { position: relative; max-width: 900px; }
 .hero-eyebrow {
   font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 600;
@@ -122,8 +123,9 @@ nav#top-nav {
 }
 .hero-eyebrow::before { content: ''; display: block; width: 40px; height: 2px; background: var(--gold); }
 .hero h1 {
-  font-family: 'Bebas Neue', sans-serif; font-size: clamp(60px, 10vw, 120px);
-  line-height: 0.9; letter-spacing: 0.02em; color: var(--white); margin-bottom: 2rem;
+  font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px, 7vw, 96px);
+  line-height: 0.95; letter-spacing: 0.02em; color: var(--white); margin-bottom: 1.5rem;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.8), 0 0 80px rgba(0,0,0,0.5);
 }
 .hero h1 em { font-style: normal; color: var(--gold); }
 .hero-sub { font-size: 18px; font-weight: 300; color: var(--lighter-gray); max-width: 520px; margin-bottom: 3rem; line-height: 1.7; }
