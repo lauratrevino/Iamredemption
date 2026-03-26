@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Podcast | I Am Redemption</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<nav id="top-nav">
+  <a href="index.html" class="nav-logo"><img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/463757f4-1137-4896-b8fb-007204244ae4/IAR+Logo+Main_Light.png?format=300w" alt="I Am Redemption"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="where-you-stand.html">Where You Stand</a></li>
+    <li><a href="podcast.html" class="active">Podcast</a></li>
+    <li><a href="community.html">Community</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="speaking.html">Speaking</a></li>
+    <li><a href="https://iamredemption.com/donate" class="nav-cta">Donate</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/db6766d5-d5e4-408a-853e-5118433c47dc/IARthumb_bg3.jpg');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow fade-in">I Am Redemption</div>
+    <h1 class="page-hero-title fade-in fade-in-d1">Real Stories.<br><em>Real Recovery.</em></h1>
+    <p class="page-hero-sub fade-in fade-in-d2">Every episode is proof that redemption is real. We amplify voices silenced by shame — and turn them into catalysts for change.</p>
+  </div>
+</div>
+
+<!-- PLAYER + EPISODES -->
+<section class="content-section dark">
+  <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start;">
+    <div class="fade-in">
+      <div class="section-label">Now Playing</div>
+      <h2 class="section-title" style="margin-bottom:2rem;">Listen.<br>Be Changed.</h2>
+
+      <!-- PLAYER -->
+      <div class="podcast-player">
+        <div class="player-header">
+          <div class="player-thumb">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z" fill="#0a0a0a"/>
+            </svg>
+          </div>
+          <div class="player-info">
+            <div class="player-title" id="np-title">From Combat to Heroin to 100 Miles</div>
+            <div class="player-guest" id="np-guest">Shawn Livingston · Episode 1</div>
+          </div>
+        </div>
+        <div class="player-controls">
+          <button class="play-btn" onclick="togglePlay(this)" aria-label="Play/Pause">
+            <svg id="play-icon" viewBox="0 0 24 24" fill="#0a0a0a" width="14" height="14">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </button>
+          <div class="player-progress">
+            <div class="progress-bar" onclick="seekProgress(event)">
+              <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+            </div>
+            <div class="progress-times">
+              <span id="current-time">0:00</span>
+              <span>44:38</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size:13px;color:var(--light-gray);line-height:1.7;margin-bottom:2rem;">This player is a UI preview. To listen to the full IAR podcast, click any episode below or visit the links on the right.</p>
+
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+        <a href="https://iamredemption.com/podcast-guests" class="btn-primary">All Episodes</a>
+        <a href="https://iamredemption.com/contact#story" class="btn-outline">Submit Your Story</a>
+      </div>
+    </div>
+
+    <div class="fade-in fade-in-d1">
+      <div class="section-label" style="margin-bottom:1.5rem;">Episodes</div>
+      <div class="episode-list">
+        <div class="episode-item" onclick="loadEpisode('From Combat to Heroin to 100 Miles','Shawn Livingston · Episode 1',0)">
+          <div class="ep-num">01</div>
+          <div class="ep-info"><div class="ep-title">From Combat to Heroin to 100 Miles</div><div class="ep-guest">Shawn Livingston</div></div>
+          <div class="ep-arrow">→</div>
+        </div>
+        <div class="episode-item" onclick="loadEpisode('What Rock Bottom Actually Looks Like','Community Stories · Episode 2',0)">
+          <div class="ep-num">02</div>
+          <div class="ep-info"><div class="ep-title">What Rock Bottom Actually Looks Like</div><div class="ep-guest">Community Stories</div></div>
+          <div class="ep-arrow">→</div>
+        </div>
+        <div class="episode-item" onclick="loadEpisode('Running as Recovery','Redemption Crew · Episode 3',0)">
+          <div class="ep-num">03</div>
+          <div class="ep-info"><div class="ep-title">Running as Recovery — Why Movement Matters</div><div class="ep-guest">Redemption Crew</div></div>
+          <div class="ep-arrow">→</div>
+        </div>
+        <div class="episode-item" onclick="loadEpisode('When Family Becomes the Casualty','Guest Story · Episode 4',0)">
+          <div class="ep-num">04</div>
+          <div class="ep-info"><div class="ep-title">When Family Becomes the Casualty</div><div class="ep-guest">Guest Story</div></div>
+          <div class="ep-arrow">→</div>
+        </div>
+        <div class="episode-item" onclick="loadEpisode('The 60-Day Decision','Community · Episode 5',0)">
+          <div class="ep-num">05</div>
+          <div class="ep-info"><div class="ep-title">The 60-Day Decision</div><div class="ep-guest">Community</div></div>
+          <div class="ep-arrow">→</div>
+        </div>
+        <div class="episode-item" onclick="loadEpisode('Service as Recovery','Phase 04 Stories · Episode 6',0)">
+          <div class="ep-num">06</div>
+          <div class="ep-info"><div class="ep-title">Service as Recovery</div><div class="ep-guest">Phase 04 Stories</div></div>
+          <div class="ep-arrow">→</div>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem;">
+        <a href="https://iamredemption.com/podcast-guests" class="btn-outline" style="width:100%;text-align:center;display:block;">View All Episodes on IAR →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="content-section alt">
+  <div class="section-label fade-in">Community Voices</div>
+  <h2 class="section-title fade-in">What Redemption<br>Looks Like.</h2>
+  <div class="testimonials-wrap fade-in fade-in-d1">
+    <div class="t-track" id="t-track">
+      <div class="t-card"><div class="t-quote">"</div><p class="t-text">I came in broken. The podcast was the first time I heard someone tell my story. That minute changed my life.</p><div class="t-author">Darnell W.</div><div class="t-phase">Phase 01 — Wake-Up</div></div>
+      <div class="t-card"><div class="t-quote">"</div><p class="t-text">I showed up to my first run not knowing anyone. Three months later, these people are my family.</p><div class="t-author">Marcus T.</div><div class="t-phase">Phase 02 — Built by Pain</div></div>
+      <div class="t-card"><div class="t-quote">"</div><p class="t-text">The Monday meetings gave me structure when I had none. Real talk, no judgment. 14 months sober.</p><div class="t-author">Carlos M.</div><div class="t-phase">Phase 03 — Built Different</div></div>
+      <div class="t-card"><div class="t-quote">"</div><p class="t-text">I was the guy who needed help. Now I'm helping run meetings. Service is the last mile of recovery.</p><div class="t-author">James R.</div><div class="t-phase">Phase 04 — Powered by Purpose</div></div>
+      <div class="t-card"><div class="t-quote">"</div><p class="t-text">Six miles every Saturday rewired my brain. Movement became my medicine.</p><div class="t-author">Tony S.</div><div class="t-phase">Phase 02 — Built by Pain</div></div>
+    </div>
+  </div>
+  <div class="t-nav" id="t-nav"></div>
+</section>
+
+<div class="quote-banner">
+  <p class="quote-text">"All it takes is a minute for something to happen — good or bad. What matters is what you do next."</p>
+  <p class="quote-attr">Shawn Livingston — Founder, I Am Redemption</p>
+</div>
+
+<div class="email-bar">
+  <div class="email-bar-inner">
+    <div class="email-bar-text"><h3>Stay In The Fight.</h3><p>Stories, events, and community updates — straight to your inbox.</p></div>
+    <div class="email-bar-form">
+      <input type="email" class="email-input" placeholder="Enter your email address">
+      <button class="email-btn" onclick="subscribeEmail()">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/6b16edf7-0f45-4bb4-8336-2331d382807f/IAR-Logo-Main_Y-02.png" alt="I Am Redemption">
+      <p>No past is too broken. No person is beyond hope.</p>
+      <p class="footer-legal">501(c)(3) Registered Nonprofit</p>
+    </div>
+    <div class="footer-col"><h5>Navigate</h5><ul>
+      <li><a href="index.html">Home</a></li><li><a href="where-you-stand.html">Where You Stand</a></li>
+      <li><a href="podcast.html">Podcast</a></li><li><a href="community.html">Community</a></li>
+      <li><a href="impact.html">Impact</a></li><li><a href="speaking.html">Speaking</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Get Involved</h5><ul>
+      <li><a href="community.html">Join a Run</a></li><li><a href="community.html#challenge">60-Day Challenge</a></li>
+      <li><a href="community.html#story">Submit Your Story</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Support</h5><ul>
+      <li><a href="impact.html#donate">Donate</a></li><li><a href="speaking.html">Book Shawn</a></li>
+      <li><a href="https://iamredemption.com/merch">Merch</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 I Am Redemption. All Rights Reserved.</span><span>Austin, TX</span></div>
+</footer>
+
+<nav class="mobile-bottom-nav">
+  <a href="index.html" class="mbn-item"><div class="mbn-icon">⌂</div><div class="mbn-label">Home</div></a>
+  <a href="where-you-stand.html" class="mbn-item"><div class="mbn-icon">◈</div><div class="mbn-label">Journey</div></a>
+  <a href="community.html" class="mbn-item"><div class="mbn-icon">◎</div><div class="mbn-label">Community</div></a>
+  <a href="podcast.html" class="mbn-item active"><div class="mbn-icon">▷</div><div class="mbn-label">Podcast</div></a>
+  <a href="https://iamredemption.com/donate" class="mbn-item mbn-donate"><div class="mbn-icon">♡</div><div class="mbn-label">Donate</div></a>
+</nav>
+
+<script src="shared.js"></script>
+<script>
+// Seek bar click
+function seekProgress(e) {
+  const bar = e.currentTarget;
+  const pct = (e.offsetX / bar.offsetWidth) * 100;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  const totalSecs = 44 * 60 + 38;
+  const current = Math.round((pct / 100) * totalSecs);
+  document.getElementById('current-time').textContent = Math.floor(current/60) + ':' + String(current%60).padStart(2,'0');
+}
+</script>
+</body>
+</html>

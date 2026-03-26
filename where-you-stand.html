@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where You Stand | I Am Redemption</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<nav id="top-nav">
+  <a href="index.html" class="nav-logo"><img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/463757f4-1137-4896-b8fb-007204244ae4/IAR+Logo+Main_Light.png?format=300w" alt="I Am Redemption"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="where-you-stand.html" class="active">Where You Stand</a></li>
+    <li><a href="podcast.html">Podcast</a></li>
+    <li><a href="community.html">Community</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="speaking.html">Speaking</a></li>
+    <li><a href="https://iamredemption.com/donate" class="nav-cta">Donate</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/a8337b04-69d4-4ddd-85ae-4023f42040be/454457859_1181241769877982_4024960473457995510_n.jpg');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow fade-in">Find Your Place</div>
+    <h1 class="page-hero-title fade-in fade-in-d1">Where<br>You <em>Stand.</em></h1>
+    <p class="page-hero-sub fade-in fade-in-d2">Every person enters the journey at a different point. Five phases. One path. Click yours to see what we offer and how to get started.</p>
+  </div>
+</div>
+
+<!-- PHASE MAP -->
+<div class="phase-map-bar">
+  <div class="phase-map-inner">
+    <div class="phase-map-line"></div>
+    <div class="phase-map-progress" id="phase-progress"></div>
+    <div class="phase-node" onclick="selectPhaseNode(1)" data-phase="1">
+      <div class="phase-dot">01</div>
+      <div class="phase-node-label">Wake-Up</div>
+      <div class="phase-node-period">Jan–Mar</div>
+    </div>
+    <div class="phase-node" onclick="selectPhaseNode(2)" data-phase="2">
+      <div class="phase-dot">02</div>
+      <div class="phase-node-label">Built by Pain</div>
+      <div class="phase-node-period">Apr–Jun</div>
+    </div>
+    <div class="phase-node" onclick="selectPhaseNode(3)" data-phase="3">
+      <div class="phase-dot">03</div>
+      <div class="phase-node-label">Built Different</div>
+      <div class="phase-node-period">Jul–Sep</div>
+    </div>
+    <div class="phase-node" onclick="selectPhaseNode(4)" data-phase="4">
+      <div class="phase-dot">04</div>
+      <div class="phase-node-label">Powered by Purpose</div>
+      <div class="phase-node-period">Oct–Nov</div>
+    </div>
+    <div class="phase-node" onclick="selectPhaseNode(5)" data-phase="5">
+      <div class="phase-dot">05</div>
+      <div class="phase-node-label">What Comes After</div>
+      <div class="phase-node-period">December</div>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE CARDS -->
+<div class="content-section alt" style="padding-top:2rem;">
+  <div class="stand-grid" id="phases">
+    <div class="stand-card fade-in" onclick="togglePhase(1)" id="card-1">
+      <div class="stand-card-phase">Phase 01</div>
+      <div class="stand-card-number">01</div>
+      <div class="stand-card-title">Wake-Up</div>
+      <div class="stand-card-period">Jan – Mar</div>
+      <div class="stand-card-desc">The moment you realize something has to change.</div>
+    </div>
+    <div class="stand-card fade-in fade-in-d1" onclick="togglePhase(2)" id="card-2">
+      <div class="stand-card-phase">Phase 02</div>
+      <div class="stand-card-number">02</div>
+      <div class="stand-card-title">Built by Pain</div>
+      <div class="stand-card-period">Apr – Jun</div>
+      <div class="stand-card-desc">Choosing to fight even when it's hard.</div>
+    </div>
+    <div class="stand-card fade-in fade-in-d2" onclick="togglePhase(3)" id="card-3">
+      <div class="stand-card-phase">Phase 03</div>
+      <div class="stand-card-number">03</div>
+      <div class="stand-card-title">Built Different</div>
+      <div class="stand-card-period">Jul – Sep</div>
+      <div class="stand-card-desc">You're no longer who you were — and it shows.</div>
+    </div>
+    <div class="stand-card fade-in fade-in-d3" onclick="togglePhase(4)" id="card-4">
+      <div class="stand-card-phase">Phase 04</div>
+      <div class="stand-card-number">04</div>
+      <div class="stand-card-title">Powered by Purpose</div>
+      <div class="stand-card-period">Oct – Nov</div>
+      <div class="stand-card-desc">The shift from "me" to "how can I help?"</div>
+    </div>
+    <div class="stand-card fade-in fade-in-d4" onclick="togglePhase(5)" id="card-5">
+      <div class="stand-card-phase">Phase 05</div>
+      <div class="stand-card-number">05</div>
+      <div class="stand-card-title">What Comes After</div>
+      <div class="stand-card-period">December</div>
+      <div class="stand-card-desc">You become what others look to.</div>
+    </div>
+    <div class="stand-detail" id="detail-1">
+      <div class="stand-detail-block"><h4>If This Is You</h4><p>Awareness. Reflection. Honesty. You've recognized something needs to shift — and you're ready to name it.</p></div>
+      <div class="stand-detail-block"><h4>What We Offer</h4><p>Direction, language, and real entry points. Community built around truth, awareness, and hard conversations. Podcast stories of realization.</p></div>
+      <div class="stand-detail-block"><h4>How to Get Started</h4><p>Listen to the podcast — hear stories of realization. Attend a Monday meeting or join a community run.<br><br><a href="community.html" class="stand-detail-link">Explore Events →</a></p></div>
+    </div>
+    <div class="stand-detail" id="detail-2">
+      <div class="stand-detail-block"><h4>If This Is You</h4><p>Breaking habits. Showing up through discomfort. Building structure one day at a time.</p></div>
+      <div class="stand-detail-block"><h4>What We Offer</h4><p>Community runs, support groups, and the 60-Day Challenge. Discipline built through accountability and consistency.</p></div>
+      <div class="stand-detail-block"><h4>How to Get Started</h4><p>Join a Redemption Crew Run — Tuesdays, Thursdays, or Saturdays. Show up once. Let the community do the rest.<br><br><a href="community.html#challenge" class="stand-detail-link">60-Day Challenge →</a></p></div>
+    </div>
+    <div class="stand-detail" id="detail-3">
+      <div class="stand-detail-block"><h4>If This Is You</h4><p>Consistency. Identity. Ownership. You've put in the work and it's starting to show in how you carry yourself.</p></div>
+      <div class="stand-detail-block"><h4>What We Offer</h4><p>Events in new environments, expanding locations, and a membership structure to reinforce your growth and create opportunities to step up.</p></div>
+      <div class="stand-detail-block"><h4>How to Get Started</h4><p>Attend a community event. Consider membership. Take on more responsibility within the group.<br><br><a href="community.html" class="stand-detail-link">Explore Events →</a></p></div>
+    </div>
+    <div class="stand-detail" id="detail-4">
+      <div class="stand-detail-block"><h4>If This Is You</h4><p>Leadership. Service. Impact. Your recovery has become a platform — and you're ready to give back.</p></div>
+      <div class="stand-detail-block"><h4>What We Offer</h4><p>Leadership roles within IAR, speaking opportunities, and podcast guest features. A platform to lead others.</p></div>
+      <div class="stand-detail-block"><h4>How to Get Started</h4><p>Reach out about leadership roles. Share your story on the podcast. Mentor someone in an earlier phase.<br><br><a href="https://iamredemption.com/contact" class="stand-detail-link">Get Involved →</a></p></div>
+    </div>
+    <div class="stand-detail" id="detail-5">
+      <div class="stand-detail-block"><h4>If This Is You</h4><p>Standards. Consistency. Long-term impact. You are a pillar. Others look to you — and you welcome that responsibility.</p></div>
+      <div class="stand-detail-block"><h4>What We Offer</h4><p>Brand Ambassador Program. Representation as an extension of IAR. Formalized ownership of legacy and responsibility.</p></div>
+      <div class="stand-detail-block"><h4>How to Get Started</h4><p>Apply to become a Brand Ambassador. Carry the mission forward as a community standard-bearer.<br><br><a href="https://iamredemption.com/contact" class="stand-detail-link">Apply Now →</a></p></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="quote-banner">
+  <p class="quote-text">Not sure where you are? Start with a run. Everything else follows.</p>
+  <p class="quote-attr"><a href="community.html" style="color:var(--gold-dark);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:0.15em;text-transform:uppercase;">Find a Community Event →</a></p>
+</div>
+
+<div class="email-bar">
+  <div class="email-bar-inner">
+    <div class="email-bar-text"><h3>Stay In The Fight.</h3><p>Stories, events, and community updates — straight to your inbox.</p></div>
+    <div class="email-bar-form">
+      <input type="email" class="email-input" placeholder="Enter your email address">
+      <button class="email-btn" onclick="subscribeEmail()">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/6b16edf7-0f45-4bb4-8336-2331d382807f/IAR-Logo-Main_Y-02.png" alt="I Am Redemption">
+      <p>No past is too broken. No person is beyond hope.</p>
+      <p class="footer-legal">501(c)(3) Registered Nonprofit</p>
+    </div>
+    <div class="footer-col"><h5>Navigate</h5><ul>
+      <li><a href="index.html">Home</a></li><li><a href="where-you-stand.html">Where You Stand</a></li>
+      <li><a href="podcast.html">Podcast</a></li><li><a href="community.html">Community</a></li>
+      <li><a href="impact.html">Impact</a></li><li><a href="speaking.html">Speaking</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Get Involved</h5><ul>
+      <li><a href="community.html">Join a Run</a></li><li><a href="community.html#challenge">60-Day Challenge</a></li>
+      <li><a href="community.html#story">Submit Your Story</a></li><li><a href="https://iamredemption.com/contact#volunteer">Volunteer</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Support</h5><ul>
+      <li><a href="impact.html#donate">Donate</a></li><li><a href="impact.html">Partner With Us</a></li>
+      <li><a href="speaking.html">Book Shawn</a></li><li><a href="https://iamredemption.com/merch">Merch</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 I Am Redemption. All Rights Reserved.</span><span>Austin, TX</span></div>
+</footer>
+
+<nav class="mobile-bottom-nav">
+  <a href="index.html" class="mbn-item"><div class="mbn-icon">⌂</div><div class="mbn-label">Home</div></a>
+  <a href="where-you-stand.html" class="mbn-item active"><div class="mbn-icon">◈</div><div class="mbn-label">Journey</div></a>
+  <a href="community.html" class="mbn-item"><div class="mbn-icon">◎</div><div class="mbn-label">Community</div></a>
+  <a href="podcast.html" class="mbn-item"><div class="mbn-icon">▷</div><div class="mbn-label">Podcast</div></a>
+  <a href="https://iamredemption.com/donate" class="mbn-item mbn-donate"><div class="mbn-icon">♡</div><div class="mbn-label">Donate</div></a>
+</nav>
+
+<script src="shared.js"></script>
+</body>
+</html>

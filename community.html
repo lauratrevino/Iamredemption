@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community | I Am Redemption</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<nav id="top-nav">
+  <a href="index.html" class="nav-logo"><img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/463757f4-1137-4896-b8fb-007204244ae4/IAR+Logo+Main_Light.png?format=300w" alt="I Am Redemption"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="where-you-stand.html">Where You Stand</a></li>
+    <li><a href="podcast.html">Podcast</a></li>
+    <li><a href="community.html" class="active">Community</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="speaking.html">Speaking</a></li>
+    <li><a href="https://iamredemption.com/donate" class="nav-cta">Donate</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/8825b60f-6102-4d1c-92f3-aa01d15e81c4/534541994_17941510155028615_2774412757570962117_n.jpg');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow fade-in">Runs · Meetings · Events</div>
+    <h1 class="page-hero-title fade-in fade-in-d1">Where<br><em>Recovery</em><br>Runs.</h1>
+    <p class="page-hero-sub fade-in fade-in-d2">Everyone is welcome. All paces. All places. Show up once and let the community do the rest.</p>
+  </div>
+</div>
+
+<!-- EVENTS -->
+<section class="content-section dark" id="events">
+  <div class="section-label fade-in">Events & Runs</div>
+  <h2 class="section-title fade-in" style="margin-bottom:2.5rem;">Show Up.<br>Every Time.</h2>
+  <div class="events-grid">
+    <div class="event-card fade-in">
+      <div class="event-tag">Weekly</div>
+      <div class="event-name">Monday Men's Meeting</div>
+      <div class="event-details">
+        <strong>Every Monday</strong><br>
+        A space to speak truth, be heard, and stay accountable. Food and drinks provided. During warmer months, meetings are held indoors with A/C.<br><br>
+        <strong>Open to all men</strong> — wherever you are in the journey.
+      </div>
+      <a href="https://iamredemption.com/upcoming-events" class="event-link">Details & RSVP →</a>
+    </div>
+    <div class="event-card fade-in fade-in-d1">
+      <div class="event-tag">Running · Saturdays</div>
+      <div class="event-name">Redemption Crew</div>
+      <div class="event-details">
+        <strong>Every Saturday · 7:30 AM CST</strong><br>
+        515 S Pleasant Valley Rd<br>Austin, TX 78741<br><br>
+        <strong>Short Route:</strong> ~2 miles (walk/jog friendly)<br>
+        <strong>Long Route:</strong> ~6 miles<br><br>
+        Join us — no pace too slow, no story too hard.
+      </div>
+      <a href="https://maps.google.com/?q=515+S+Pleasant+Valley+Rd+Austin+TX+78741" target="_blank" class="event-link">View on Map →</a>
+    </div>
+    <div class="event-card fade-in fade-in-d2">
+      <div class="event-tag">Running · Tue & Thu</div>
+      <div class="event-name">Redemption Crew</div>
+      <div class="event-details">
+        <strong>Tuesdays & Thursdays</strong><br>
+        6920 Menchaca Rd<br>Austin, TX 78745<br>
+        (Sprouts parking lot)<br><br>
+        <strong>Main group:</strong> 6:00 AM CST<br>
+        <strong>Early miles:</strong> 5:15 AM CST<br><br>
+        Join us before the sun. Show up for yourself.
+      </div>
+      <a href="https://maps.google.com/?q=6920+Menchaca+Rd+Austin+TX+78745" target="_blank" class="event-link">View on Map →</a>
+    </div>
+  </div>
+  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+    <a href="https://iamredemption.com/upcoming-events" class="btn-outline">All Upcoming Events</a>
+    <a href="https://iamredemption.com/donate#get-involved" class="btn-primary">How to Join</a>
+  </div>
+</section>
+
+<!-- 60-DAY CHALLENGE -->
+<section class="challenge-section" id="challenge">
+  <div class="challenge-inner">
+    <div class="challenge-text fade-in">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(0,0,0,0.5);margin-bottom:0.5rem;display:flex;align-items:center;gap:10px;"><span style="display:block;width:28px;height:1.5px;background:rgba(0,0,0,0.3);"></span>The Challenge</div>
+      <h2 class="challenge-title">60 Days.<br>One Decision.<br>Everything Changes.</h2>
+      <p>Show up every day for 60 days — to a run, a meeting, or just this community. No perfection required. <strong>Just presence.</strong></p>
+      <p>Thousands of people have done it. Their stories are proof. Yours is next.</p>
+      <div class="challenge-days" id="challenge-days"></div>
+      <p style="font-size:12px;color:rgba(0,0,0,0.4);margin-top:0.25rem;">Click days to track your progress.</p>
+    </div>
+    <div class="challenge-form-wrap fade-in fade-in-d1">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.05em;color:var(--black);margin-bottom:1.5rem;">Sign Up. Start Today.</h3>
+      <input type="text" placeholder="First Name">
+      <input type="email" placeholder="Email Address">
+      <input type="text" placeholder="City, State">
+      <select><option value="">Which phase are you in?</option><option>Phase 01 — Wake-Up</option><option>Phase 02 — Built by Pain</option><option>Phase 03 — Built Different</option><option>Phase 04 — Powered by Purpose</option><option>Phase 05 — What Comes After</option></select>
+      <button class="challenge-submit" onclick="submitChallenge()">I'm In — Start My 60 Days</button>
+      <p style="font-size:11px;color:rgba(0,0,0,0.4);text-align:center;margin-top:0.5rem;">No spam. No pressure. Just accountability.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STORY SUBMISSION -->
+<section class="story-section" id="story">
+  <div class="story-inner">
+    <div class="fade-in">
+      <div class="section-label">Submit Your Story</div>
+      <h2 class="section-title">Your Story<br>Could Save<br>Someone's Life.</h2>
+      <p style="color:var(--lighter-gray);font-weight:300;line-height:1.8;margin-bottom:1.25rem;">Every story we share is proof that redemption is real. You don't have to have it all figured out — you just have to be honest.</p>
+      <p style="color:var(--lighter-gray);font-weight:300;line-height:1.8;margin-bottom:1.25rem;">We share stories on the podcast, in our content, and across the community. Your voice matters — and there's someone out there who needs to hear exactly what you've been through.</p>
+      <p style="color:var(--lighter-gray);font-weight:300;line-height:1.8;">Stories can be shared anonymously. We review every submission personally.</p>
+    </div>
+    <div class="story-form-wrap fade-in fade-in-d1">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:0.05em;color:var(--white);margin-bottom:1.5rem;">Share Your Story</h3>
+      <div class="story-form">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-field" placeholder="Your name or anonymous"></div>
+          <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-field" placeholder="We'll reach out privately"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Phase</label>
+          <select class="form-field"><option value="">Where are you in the journey?</option><option>Phase 01 — Wake-Up</option><option>Phase 02 — Built by Pain</option><option>Phase 03 — Built Different</option><option>Phase 04 — Powered by Purpose</option><option>Phase 05 — What Comes After</option></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Story</label>
+          <textarea class="form-field" rows="6" placeholder="Tell us what happened. Where you were, what changed, where you are now. Don't edit yourself — we want the real version."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">How can we share this?</label>
+          <select class="form-field"><option>Use my name — I own it</option><option>First name only</option><option>Fully anonymous</option><option>Contact me first before sharing</option></select>
+        </div>
+        <div class="form-privacy">Your story is treated with care. We never share without permission. Submissions are reviewed by a real person, not a bot.</div>
+        <button class="btn-primary" style="width:100%;border:none;font-size:15px;margin-top:0.25rem;" onclick="submitStory()">Submit My Story</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="quote-banner">
+  <p class="quote-text">"All it takes is a minute for something to happen — good or bad. What matters is what you do next."</p>
+  <p class="quote-attr">Shawn Livingston — Founder, I Am Redemption</p>
+</div>
+
+<div class="email-bar">
+  <div class="email-bar-inner">
+    <div class="email-bar-text"><h3>Stay In The Fight.</h3><p>Stories, events, and community updates — straight to your inbox.</p></div>
+    <div class="email-bar-form">
+      <input type="email" class="email-input" placeholder="Enter your email address">
+      <button class="email-btn" onclick="subscribeEmail()">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/6b16edf7-0f45-4bb4-8336-2331d382807f/IAR-Logo-Main_Y-02.png" alt="I Am Redemption">
+      <p>No past is too broken. No person is beyond hope.</p>
+      <p class="footer-legal">501(c)(3) Registered Nonprofit</p>
+    </div>
+    <div class="footer-col"><h5>Navigate</h5><ul>
+      <li><a href="index.html">Home</a></li><li><a href="where-you-stand.html">Where You Stand</a></li>
+      <li><a href="podcast.html">Podcast</a></li><li><a href="community.html">Community</a></li>
+      <li><a href="impact.html">Impact</a></li><li><a href="speaking.html">Speaking</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Community</h5><ul>
+      <li><a href="#events">Runs & Meetings</a></li><li><a href="#challenge">60-Day Challenge</a></li>
+      <li><a href="#story">Submit Your Story</a></li><li><a href="https://iamredemption.com/contact#volunteer">Volunteer</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Support</h5><ul>
+      <li><a href="impact.html#donate">Donate</a></li><li><a href="speaking.html">Book Shawn</a></li>
+      <li><a href="https://iamredemption.com/merch">Merch</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 I Am Redemption. All Rights Reserved.</span><span>Austin, TX</span></div>
+</footer>
+
+<nav class="mobile-bottom-nav">
+  <a href="index.html" class="mbn-item"><div class="mbn-icon">⌂</div><div class="mbn-label">Home</div></a>
+  <a href="where-you-stand.html" class="mbn-item"><div class="mbn-icon">◈</div><div class="mbn-label">Journey</div></a>
+  <a href="community.html" class="mbn-item active"><div class="mbn-icon">◎</div><div class="mbn-label">Community</div></a>
+  <a href="podcast.html" class="mbn-item"><div class="mbn-icon">▷</div><div class="mbn-label">Podcast</div></a>
+  <a href="https://iamredemption.com/donate" class="mbn-item mbn-donate"><div class="mbn-icon">♡</div><div class="mbn-label">Donate</div></a>
+</nav>
+
+<script src="shared.js"></script>
+<script>
+function submitChallenge() {
+  const btn = document.querySelector('.challenge-submit');
+  btn.textContent = "You're In! Check your email.";
+  btn.style.background = '#3b6d11';
+  btn.style.color = '#fff';
+  setTimeout(() => { btn.textContent = "I'm In — Start My 60 Days"; btn.style.background = ''; btn.style.color = ''; }, 4000);
+}
+function submitStory() {
+  const btn = event.currentTarget;
+  btn.textContent = "Story Submitted — Thank You.";
+  btn.style.background = '#3b6d11';
+  setTimeout(() => { btn.textContent = "Submit My Story"; btn.style.background = ''; }, 4000);
+}
+</script>
+</body>
+</html>
