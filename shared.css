@@ -112,9 +112,9 @@ nav#top-nav {
 .hero-bg {
   position: absolute; inset: 0;
   background-image: url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/a8337b04-69d4-4ddd-85ae-4023f42040be/454457859_1181241769877982_4024960473457995510_n.jpg');
-  background-size: cover; background-position: center top; filter: brightness(0.15);
+  background-size: cover; background-position: center top; filter: brightness(0.55);
 }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,0.98) 0%, rgba(10,10,10,0.85) 30%, rgba(10,10,10,0.4) 60%, rgba(10,10,10,0.15) 100%); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.45) 40%, rgba(10,10,10,0.1) 75%, transparent 100%); }
 .hero-content { position: relative; max-width: 900px; }
 .hero-eyebrow {
   font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 600;
