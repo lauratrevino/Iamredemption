@@ -12,20 +12,20 @@
   .featured-episode { display:grid; grid-template-columns:1fr 1fr; background:var(--black); min-height:480px; }
   .featured-video { position:relative; background:var(--dark-gray); }
   .featured-video iframe { position:absolute; inset:0; width:100%; height:100%; border:none; }
-  .featured-info { padding:4rem 3rem; display:flex; flex-direction:column; justify-content:center; border-left:1px solid rgba(200,151,58,0.2); }
-  .featured-tag { display:inline-block; font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(200,151,58,0.4); padding:4px 12px; margin-bottom:1.5rem; width:fit-content; }
+  .featured-info { padding:4rem 3rem; display:flex; flex-direction:column; justify-content:center; border-left:1px solid rgba(253,191,18,0.2); }
+  .featured-tag { display:inline-block; font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(253,191,18,0.4); padding:4px 12px; margin-bottom:1.5rem; width:fit-content; }
   .featured-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(30px,4vw,50px); line-height:0.95; letter-spacing:0.03em; color:var(--white); margin-bottom:0.5rem; }
   .featured-guest { font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5rem; }
   .featured-desc { font-size:15px; font-weight:300; color:var(--lighter-gray); line-height:1.8; margin-bottom:2rem; }
 
-  .platform-bar { background:var(--mid-gray); padding:1.75rem 2.5rem; border-bottom:1px solid rgba(200,151,58,0.15); }
+  .platform-bar { background:var(--mid-gray); padding:1.75rem 2.5rem; border-bottom:1px solid rgba(253,191,18,0.15); }
   .platform-bar-inner { display:flex; align-items:center; gap:2rem; flex-wrap:wrap; }
   .platform-label { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--light-gray); white-space:nowrap; }
   .platform-links { display:flex; gap:0.75rem; flex-wrap:wrap; }
-  .platform-link { display:inline-flex; align-items:center; gap:7px; padding:0.45rem 1rem; border:1px solid rgba(200,151,58,0.3); color:var(--lighter-gray); font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.06em; text-decoration:none; transition:all 0.2s; }
+  .platform-link { display:inline-flex; align-items:center; gap:7px; padding:0.45rem 1rem; border:1px solid rgba(253,191,18,0.3); color:var(--lighter-gray); font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.06em; text-decoration:none; transition:all 0.2s; }
   .platform-link:hover { border-color:var(--gold); color:var(--gold); }
 
-  .episode-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px; background:rgba(200,151,58,0.07); }
+  .episode-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px; background:rgba(253,191,18,0.07); }
   .ep-card { background:var(--dark-gray); display:flex; flex-direction:column; text-decoration:none; transition:background 0.2s; position:relative; overflow:hidden; }
   .ep-card:hover { background:var(--mid-gray); }
   .ep-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform 0.3s; }
@@ -49,7 +49,7 @@
   @media (max-width:960px) {
     .featured-episode { grid-template-columns:1fr; }
     .featured-video { min-height:0; padding-top:56.25%; position:relative; }
-    .featured-info { padding:2.5rem 1.5rem; border-left:none; border-top:1px solid rgba(200,151,58,0.2); }
+    .featured-info { padding:2.5rem 1.5rem; border-left:none; border-top:1px solid rgba(253,191,18,0.2); }
     .episode-grid { grid-template-columns:1fr 1fr; }
     .platform-bar { padding:1.5rem; }
   }
@@ -67,7 +67,7 @@
     <li><a href="community.html">Community</a></li>
     <li><a href="impact.html">Impact</a></li>
     <li><a href="speaking.html">Speaking</a></li>
-    <li><a href="https://iamredemption.com/donate" class="nav-cta">Donate</a></li>
+    <li><a href="https://givebutter.com/IAR" class="nav-cta">Donate</a></li>
   </ul>
   <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
@@ -110,8 +110,8 @@
   <div class="featured-info fade-in">
     <div class="featured-tag">Latest Episode</div>
     <h2 class="featured-title">I Am A Son Of God</h2>
-    <div class="featured-guest">Clayton McMurry — Air Force Special Operations</div>
-    <p class="featured-desc">Shawn sits down with Air Force Special Operations veteran Clayton McMurry — who guarded the President, deployed on high-level missions, and was part of a global cave rescue that captured the world's attention. One of the most powerful conversations to date.</p>
+    <div class="featured-guest">Clayton McMurry, Air Force Special Operations</div>
+    <p class="featured-desc">Shawn sits down with Air Force Special Operations veteran Clayton McMurry, who guarded the President, deployed on high-level missions, and was part of a global cave rescue that captured the world's attention. One of the most powerful conversations to date.</p>
     <div class="btn-row">
       <a href="https://www.youtube.com/watch?v=dJYq0_pFa1s" target="_blank" class="btn-primary">Watch on YouTube</a>
       <a href="https://iamredemption.com/podcast-guests/clayton-mcmurry" target="_blank" class="btn-outline">Episode Page</a>
@@ -149,7 +149,7 @@
 
     <a href="https://www.youtube.com/@IAm.Redemption/podcasts" target="_blank" class="ep-card fade-in fade-in-d1">
       <div class="ep-thumb"><img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/1770848546391-PTPQ4KO0SL254RQBYYFT/Shawn+Johnson.png" alt="Shawn Johnson" loading="lazy"><div class="ep-overlay"><div class="ep-play">▶</div></div></div>
-      <div class="ep-body"><div class="ep-date">Feb 10, 2026</div><div class="ep-title">I Am A Navy SEAL</div><div class="ep-guest">Shawn Johnson</div><p class="ep-desc">Former Navy SEAL turned elite private security professional. A conversation about operating at the highest levels — and what comes after the uniform comes off.</p><div class="ep-cta">Watch Episode →</div></div>
+      <div class="ep-body"><div class="ep-date">Feb 10, 2026</div><div class="ep-title">I Am A Navy SEAL</div><div class="ep-guest">Shawn Johnson</div><p class="ep-desc">Former Navy SEAL turned elite private security professional. A conversation about operating at the highest levels, and what comes after the uniform comes off.</p><div class="ep-cta">Watch Episode →</div></div>
     </a>
 
     <a href="https://www.youtube.com/@IAm.Redemption/podcasts" target="_blank" class="ep-card fade-in fade-in-d2">
@@ -164,42 +164,42 @@
 
     <a href="https://www.youtube.com/@IAm.Redemption/podcasts" target="_blank" class="ep-card fade-in fade-in-d1">
       <div class="ep-thumb"><img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/1770848738142-66COUT3LUXCVXXRQU35J/Kenneth+Whitacre.png" alt="Kenny Whitacre" loading="lazy"><div class="ep-overlay"><div class="ep-play">▶</div></div></div>
-      <div class="ep-body"><div class="ep-date">Jan 20, 2026</div><div class="ep-title">I Am I</div><div class="ep-guest">Kenny Whitacre</div><p class="ep-desc">Former Division I athlete whose pursuit of elite performance collided with addiction and trauma — and ultimately led him to sobriety and a new mission.</p><div class="ep-cta">Watch Episode →</div></div>
+      <div class="ep-body"><div class="ep-date">Jan 20, 2026</div><div class="ep-title">I Am I</div><div class="ep-guest">Kenny Whitacre</div><p class="ep-desc">Former Division I athlete whose pursuit of elite performance collided with addiction and trauma, and ultimately led him to sobriety and a new mission.</p><div class="ep-cta">Watch Episode →</div></div>
     </a>
 
     <a href="https://www.youtube.com/@IAm.Redemption/podcasts" target="_blank" class="ep-card fade-in fade-in-d2">
       <div class="ep-thumb"><img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/1770848773438-TEJ1LC0WG74LOQ6NYI02/Neysa+and+Chris+Scroggin.png" alt="Neysa and Chris Scroggin" loading="lazy"><div class="ep-overlay"><div class="ep-play">▶</div></div></div>
-      <div class="ep-body"><div class="ep-date">Jan 13, 2026</div><div class="ep-title">I Am Redeemed</div><div class="ep-guest">Neysa &amp; Chris Scroggin</div><p class="ep-desc">Unlike anything shared before. A powerful story of addiction, faith, integrity, and redemption — told from both sides of the same journey.</p><div class="ep-cta">Watch Episode →</div></div>
+      <div class="ep-body"><div class="ep-date">Jan 13, 2026</div><div class="ep-title">I Am Redeemed</div><div class="ep-guest">Neysa &amp; Chris Scroggin</div><p class="ep-desc">Unlike anything shared before. A powerful story of addiction, faith, integrity, and redemption, told from both sides of the same journey.</p><div class="ep-cta">Watch Episode →</div></div>
     </a>
 
     <a href="https://www.youtube.com/@IAm.Redemption/podcasts" target="_blank" class="ep-card fade-in">
       <div class="ep-thumb"><img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/1770848990575-NMGYPD74AVC824VOQ4RA/Kevin+Crenshaw+B%26W+%281%29.png" alt="Kevin Crenshaw" loading="lazy"><div class="ep-overlay"><div class="ep-play">▶</div></div></div>
-      <div class="ep-body"><div class="ep-date">Jan 6, 2026</div><div class="ep-title">I Am A Child Of God</div><div class="ep-guest">Kevin Crenshaw</div><p class="ep-desc">Heartbreak, suicidal thoughts, addiction, chronic illness — Kevin's raw and honest journey through losing everything, before his life ever looked like it was falling apart.</p><div class="ep-cta">Watch Episode →</div></div>
+      <div class="ep-body"><div class="ep-date">Jan 6, 2026</div><div class="ep-title">I Am A Child Of God</div><div class="ep-guest">Kevin Crenshaw</div><p class="ep-desc">Heartbreak, suicidal thoughts, addiction, chronic illness: Kevin's raw and honest journey through losing everything, before his life ever looked like it was falling apart.</p><div class="ep-cta">Watch Episode →</div></div>
     </a>
 
     <a href="https://www.youtube.com/@IAm.Redemption/podcasts" target="_blank" class="ep-card fade-in fade-in-d1">
       <div class="ep-thumb"><img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/1767759280077-ZI0DNZD74I2LLH10KDRI/Terrance+Ogden+and+Anna+B%26W.png" alt="Terrance and Anna Ogden" loading="lazy"><div class="ep-overlay"><div class="ep-play">▶</div></div></div>
-      <div class="ep-body"><div class="ep-date">Dec 30, 2025</div><div class="ep-title">I Am Mr. And Mrs. Grit</div><div class="ep-guest">Terrence &amp; Anna Ogden</div><p class="ep-desc">Fresh off a 1,000-mile ruck across Texas — Terrence returns with his wife Anna, who shares what 40 days on the road looked like for the family back home.</p><div class="ep-cta">Watch Episode →</div></div>
+      <div class="ep-body"><div class="ep-date">Dec 30, 2025</div><div class="ep-title">I Am Mr. And Mrs. Grit</div><div class="ep-guest">Terrence &amp; Anna Ogden</div><p class="ep-desc">Fresh off a 1,000-mile ruck across Texas: Terrence returns with his wife Anna, who shares what 40 days on the road looked like for the family back home.</p><div class="ep-cta">Watch Episode →</div></div>
     </a>
 
     <a href="https://www.youtube.com/@IAm.Redemption/podcasts" target="_blank" class="ep-card fade-in fade-in-d2">
       <div class="ep-thumb"><img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/1767759040583-AA6VD23TUQSFF3VBSEAW/Lydia+Richard+B%26W.png" alt="Lydia Richard" loading="lazy"><div class="ep-overlay"><div class="ep-play">▶</div></div></div>
-      <div class="ep-body"><div class="ep-date">Dec 23, 2025</div><div class="ep-title">I Am Wounds To Wealth</div><div class="ep-guest">Lydia Richard</div><p class="ep-desc">Childhood trauma, substance use, mental health struggles — realities far more common than most people realize, yet rarely talked about openly.</p><div class="ep-cta">Watch Episode →</div></div>
+      <div class="ep-body"><div class="ep-date">Dec 23, 2025</div><div class="ep-title">I Am Wounds To Wealth</div><div class="ep-guest">Lydia Richard</div><p class="ep-desc">Childhood trauma, substance use, mental health struggles: realities far more common than most people realize, yet rarely talked about openly.</p><div class="ep-cta">Watch Episode →</div></div>
     </a>
 
     <a href="https://www.youtube.com/@IAm.Redemption/podcasts" target="_blank" class="ep-card fade-in">
       <div class="ep-thumb"><img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/1767758784346-9YG1DGTIDL2FN9YHSBHL/Josh+Melching+B%26W.png" alt="Josh Melching" loading="lazy"><div class="ep-overlay"><div class="ep-play">▶</div></div></div>
-      <div class="ep-body"><div class="ep-date">Dec 16, 2025</div><div class="ep-title">I Am War's End</div><div class="ep-guest">Josh Melching</div><p class="ep-desc">Returning from war, the battle didn't end. PTSD slowly surfaced and Josh lost some of the closest people in the world to him — a story of survival and rebuilding.</p><div class="ep-cta">Watch Episode →</div></div>
+      <div class="ep-body"><div class="ep-date">Dec 16, 2025</div><div class="ep-title">I Am War's End</div><div class="ep-guest">Josh Melching</div><p class="ep-desc">Returning from war, the battle didn't end. PTSD slowly surfaced and Josh lost some of the closest people in the world to him, a story of survival and rebuilding.</p><div class="ep-cta">Watch Episode →</div></div>
     </a>
 
     <a href="https://www.youtube.com/@IAm.Redemption/podcasts" target="_blank" class="ep-card fade-in fade-in-d1">
       <div class="ep-thumb"><img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/1767758620086-8XGNDKI1C68A52OQBKF9/Casey+Barnett+b%26W.png" alt="Casey Barnett" loading="lazy"><div class="ep-overlay"><div class="ep-play">▶</div></div></div>
-      <div class="ep-body"><div class="ep-date">Dec 9, 2025</div><div class="ep-title">I Am Born Again</div><div class="ep-guest">Casey Barnett</div><p class="ep-desc">Looked healthy on the outside while quietly battling pills, alcohol, and isolation for years. San Antonio father, trainer, and boxing coach — this is what recovery really looks like.</p><div class="ep-cta">Watch Episode →</div></div>
+      <div class="ep-body"><div class="ep-date">Dec 9, 2025</div><div class="ep-title">I Am Born Again</div><div class="ep-guest">Casey Barnett</div><p class="ep-desc">Looked healthy on the outside while quietly battling pills, alcohol, and isolation for years. San Antonio father, trainer, and boxing coach. This is what recovery really looks like.</p><div class="ep-cta">Watch Episode →</div></div>
     </a>
 
     <a href="https://www.youtube.com/@IAm.Redemption/podcasts" target="_blank" class="ep-card fade-in fade-in-d2">
       <div class="ep-thumb"><img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/1767758317145-K3Z04RUHVVUB5ECLR6CC/Mitch+Ammons+B%26W.png" alt="Mitch Ammons" loading="lazy"><div class="ep-overlay"><div class="ep-play">▶</div></div></div>
-      <div class="ep-body"><div class="ep-date">Dec 2, 2025</div><div class="ep-title">I Am Disciplined AF</div><div class="ep-guest">Mitch Ammons</div><p class="ep-desc">Once lost in hardcore addiction — heroin, meth, oxy. Hit rock bottom more times than he can count. Then one day he found community, and everything changed.</p><div class="ep-cta">Watch Episode →</div></div>
+      <div class="ep-body"><div class="ep-date">Dec 2, 2025</div><div class="ep-title">I Am Disciplined AF</div><div class="ep-guest">Mitch Ammons</div><p class="ep-desc">Once lost in hardcore addiction: heroin, meth, oxy. Hit rock bottom more times than he can count. Then one day he found community, and everything changed.</p><div class="ep-cta">Watch Episode →</div></div>
     </a>
 
   </div>
@@ -214,18 +214,15 @@
 <div style="background:var(--dark-gray);padding:5rem 2.5rem;text-align:center;border-top:2px solid var(--gold);">
   <div class="section-label center fade-in">Your Story</div>
   <h2 class="section-title fade-in" style="text-align:center;">Want to Be<br>on the Podcast?</h2>
-  <p class="section-subtitle fade-in" style="text-align:center;margin:0 auto 2.5rem;">Every episode starts with someone willing to be honest. If you have a story of redemption — we want to hear it.</p>
+  <p class="section-subtitle fade-in" style="text-align:center;margin:0 auto 2.5rem;">Every episode starts with someone willing to be honest. If you have a story of redemption, we want to hear it.</p>
   <a href="community.html#story" class="btn-primary fade-in">Submit Your Story</a>
 </div>
 
-<div class="quote-banner">
-  <p class="quote-text">"All it takes is a minute for something to happen — good or bad. What matters is what you do next."</p>
-  <p class="quote-attr">Shawn Livingston — Founder, I Am Redemption</p>
-</div>
+
 
 <div class="email-bar">
   <div class="email-bar-inner">
-    <div class="email-bar-text"><h3>Stay In The Fight.</h3><p>New episodes every Tuesday — plus events, stories, and community updates.</p></div>
+    <div class="email-bar-text"><h3>Stay In The Fight.</h3><p>New episodes every Tuesday, plus events, stories, and community updates.</p></div>
     <div class="email-bar-form">
       <input type="email" class="email-input" placeholder="Enter your email address">
       <button class="email-btn" onclick="subscribeEmail()">Subscribe</button>
@@ -252,7 +249,7 @@
       <li><a href="community.html#story">Submit Your Story</a></li>
     </ul></div>
     <div class="footer-col"><h5>Support</h5><ul>
-      <li><a href="impact.html#donate">Donate</a></li>
+      <li><a href="https://givebutter.com/IAR">Donate</a></li>
       <li><a href="speaking.html">Book Shawn</a></li>
       <li><a href="https://iamredemption.com/merch">Merch</a></li>
     </ul></div>
@@ -265,7 +262,7 @@
   <a href="where-you-stand.html" class="mbn-item"><div class="mbn-icon">◈</div><div class="mbn-label">Journey</div></a>
   <a href="community.html" class="mbn-item"><div class="mbn-icon">◎</div><div class="mbn-label">Community</div></a>
   <a href="podcast.html" class="mbn-item active"><div class="mbn-icon">▷</div><div class="mbn-label">Podcast</div></a>
-  <a href="https://iamredemption.com/donate" class="mbn-item mbn-donate"><div class="mbn-icon">♡</div><div class="mbn-label">Donate</div></a>
+  <a href="https://givebutter.com/IAR" class="mbn-item mbn-donate"><div class="mbn-icon">♡</div><div class="mbn-label">Donate</div></a>
 </nav>
 
 <script src="shared.js"></script>
