@@ -7,30 +7,6 @@ setTimeout(() => {
   document.querySelectorAll('.hero .fade-in, .page-hero .fade-in').forEach(el => el.classList.add('visible'));
 }, 80);
 
-// ── STATS COUNTER ──
-function animateCounter(el) {
-  const target = parseInt(el.dataset.target);
-  const suffix = el.dataset.suffix || '';
-  const duration = 1800;
-  const start = performance.now();
-  function tick(now) {
-    const p = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - p, 3);
-    el.textContent = Math.round(eased * target).toLocaleString() + suffix;
-    if (p < 1) requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-}
-const statsObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      document.querySelectorAll('.stat-number').forEach(animateCounter);
-      statsObs.disconnect();
-    }
-  });
-}, { threshold: 0.4 });
-const statsBar = document.querySelector('.stats-bar');
-if (statsBar) statsObs.observe(statsBar);
 
 // ── NAV SCROLL SHRINK ──
 window.addEventListener('scroll', () => {
