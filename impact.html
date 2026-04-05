@@ -8,6 +8,56 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
+
+  <style>
+    /* ── GLOBAL POLISH OVERRIDES ── */
+    /* Ensure footer text is always readable */
+    footer { background: #080808 !important; }
+    .footer-col ul a { color: #c0c0c0 !important; font-size: 14px !important; }
+    .footer-col ul a:hover { color: var(--gold) !important; }
+    .footer-brand p { color: #b8b8b8 !important; font-size: 14px !important; }
+    .footer-col h5 { color: var(--gold) !important; }
+    .footer-bottom { color: #707070 !important; }
+    /* Email bar text */
+    .email-bar-text p { color: #d0d0d0 !important; }
+    /* Section body text */
+    .section-subtitle { color: #d0d0d0 !important; }
+    /* Page hero sub */
+    .page-hero-sub { color: #d0d0d0 !important; }
+    /* General paragraph readability */
+    p { color: #c8c8c8; }
+    /* Impact block text */
+    .impact-block-text { color: #c4c4c4 !important; }
+    /* Event details */
+    .event-details { color: #c4c4c4 !important; }
+    /* Episode desc */
+    .ep-desc { color: #bcbcbc !important; }
+    /* Stand card desc */
+    .stand-card-desc { color: #c0c0c0 !important; }
+    /* Stand detail text */
+    .stand-detail-block p { color: #d0d0d0 !important; }
+    /* Tier impact text */
+    .tier-impact { color: #c4c4c4 !important; }
+    /* Form privacy */
+    .form-privacy { color: #b8b8b8 !important; }
+    /* Speaking topic text */
+    .speaking-topic { color: #d4d4d4 !important; }
+    /* Mobile bottom nav hidden on desktop */
+    @media (min-width: 961px) { .mobile-bottom-nav { display: none !important; } }
+    @media (max-width: 960px) { .mobile-bottom-nav { display: flex !important; } }
+    /* Content section max-width centering */
+    .content-section .section-label,
+    .content-section .section-title,
+    .content-section .section-subtitle { position: relative; }
+    /* Smooth section dividers */
+    .content-section.dark + .content-section.alt,
+    .content-section.alt + .content-section.dark,
+    .content-section.mid + .content-section.alt { border-top: none; }
+    /* Video section body text */
+    .video-section p { color: #d0d0d0 !important; }
+    /* Mission strip text */
+    .mission-text p { color: #cccccc !important; }
+  </style>
 </head>
 <body>
 
@@ -42,9 +92,9 @@
     <div class="fade-in">
       <div class="section-label">Our Foundation</div>
       <h2 class="section-title" style="margin-bottom:1.5rem;">Why We Exist.</h2>
-      <p style="color:var(--lighter-gray);font-weight:300;line-height:1.8;margin-bottom:1.25rem;">I Am Redemption is a registered 501(c)(3) nonprofit. Every dollar donated goes directly to funding recovery-focused programming, community events, and outreach.</p>
-      <p style="color:var(--lighter-gray);font-weight:300;line-height:1.8;margin-bottom:1.25rem;">We exist because the system fails people at the moment they need it most. <strong style="color:var(--cream);font-weight:600;">We are not the system. We are the community it missed.</strong></p>
-      <p style="color:var(--lighter-gray);font-weight:300;line-height:1.8;margin-bottom:2.5rem;">Through donor support, community participation, and shared experience, we continue to grow impact, one story, one event, one time at a time.</p>
+      <p style="color:#d4d4d4;font-weight:300;line-height:1.8;margin-bottom:1.25rem;">I Am Redemption is a registered 501(c)(3) nonprofit. Every dollar donated goes directly to funding recovery-focused programming, community events, and outreach.</p>
+      <p style="color:#d4d4d4;font-weight:300;line-height:1.8;margin-bottom:1.25rem;"><span style="color:#d0d0d0;font-weight:300;line-height:1.9;font-size:16.5px;">We exist because the system fails people at the moment they need it most. <strong style="color:var(--cream);font-weight:600;">We are not the system. We are the community it missed.</strong></p>
+      <p style="color:#d4d4d4;font-weight:300;line-height:1.8;margin-bottom:2.5rem;">Through donor support, community participation, and shared experience, we continue to grow impact, one story, one event, one time at a time.</p>
       <div class="btn-row">
         <a href="#donate" class="btn-primary">Donate Now</a>
         <a href="#partner" class="btn-outline">Become a Partner</a>
@@ -68,22 +118,22 @@
       <div style="background:var(--dark-gray);border:1px solid rgba(253,191,18,0.25);padding:2rem 2.5rem;width:100%;max-width:480px;text-align:left;">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">$25</div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--white);margin-bottom:0.4rem;">Show Up</div>
-        <div style="font-size:13px;color:var(--light-gray);line-height:1.6;">Funds a community run for one person: transportation, gear support, and entry.</div>
+        <div style="font-size:13px;color:#b0b0b0;line-height:1.6;">Funds a community run for one person: transportation, gear support, and entry.</div>
       </div>
       <div style="background:var(--dark-gray);border:2px solid var(--gold);padding:2rem 2.5rem;width:100%;max-width:480px;text-align:left;position:relative;">
         <div style="position:absolute;top:0;right:0;background:var(--gold);color:var(--black);font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:4px 12px;">Most Popular</div>
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">$100</div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--white);margin-bottom:0.4rem;">Hold Space</div>
-        <div style="font-size:13px;color:var(--light-gray);line-height:1.6;">Sponsors one full Monday Men's Meeting: room, food, drinks, and support materials.</div>
+        <div style="font-size:13px;color:#b0b0b0;line-height:1.6;">Sponsors one full Monday Men's Meeting: room, food, drinks, and support materials.</div>
       </div>
       <div style="background:var(--dark-gray);border:1px solid rgba(253,191,18,0.25);padding:2rem 2.5rem;width:100%;max-width:480px;text-align:left;">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">$50/month</div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--white);margin-bottom:0.4rem;">Stay In It</div>
-        <div style="font-size:13px;color:var(--light-gray);line-height:1.6;">Monthly recurring support: the most powerful way to sustain the mission year-round.</div>
+        <div style="font-size:13px;color:#b0b0b0;line-height:1.6;">Monthly recurring support: the most powerful way to sustain the mission year-round.</div>
       </div>
       <div style="margin-top:1rem;">
         <a href="https://givebutter.com/IAR" target="_blank" class="btn-primary" style="font-size:16px;padding:1rem 3rem;">Donate Now</a>
-        <p style="font-size:12px;color:var(--light-gray);margin-top:0.75rem;">Donations processed securely through Givebutter. All amounts welcome.</p>
+        <p style="font-size:12px;color:#b0b0b0;margin-top:0.75rem;">Donations processed securely through Givebutter. All amounts welcome.</p>
       </div>
     </div>
   </div>
@@ -109,8 +159,8 @@
     <div class="fade-in">
       <div class="section-label">Partners</div>
       <h2 class="section-title">Partner<br>With Us.</h2>
-      <p style="color:var(--lighter-gray);font-weight:300;line-height:1.8;margin-bottom:1.25rem;">Whether you're a business, organization, or individual with resources to share: there's a role for you in this mission.</p>
-      <p style="color:var(--lighter-gray);font-weight:300;line-height:1.8;margin-bottom:2rem;">We're looking for partners who believe in second chances and want to invest in the communities around them.</p>
+      <p style="color:#d4d4d4;font-weight:300;line-height:1.8;margin-bottom:1.25rem;">Whether you're a business, organization, or individual with resources to share: there's a role for you in this mission.</p>
+      <p style="color:#d4d4d4;font-weight:300;line-height:1.8;margin-bottom:2rem;">We're looking for partners who believe in second chances and want to invest in the communities around them.</p>
       <a href="speaking.html" class="btn-primary">Reach Out</a>
     </div>
     <div class="impact-aside fade-in fade-in-d2">
@@ -127,7 +177,7 @@
   <h2 class="section-title fade-in" style="text-align:center;">Give Your Time.<br>Change a Life.</h2>
   <p class="section-subtitle fade-in" style="text-align:center;margin:0 auto 2.5rem;">Volunteers power everything we do. Complete the official volunteer agreement and join the team that shows up every week for this community.</p>
   <a href="https://form.jotform.com/260924104080043" target="_blank" class="btn-primary fade-in" style="font-size:15px;padding:1rem 2.5rem;">Complete Volunteer Agreement</a>
-  <p style="font-size:12px;color:var(--light-gray);margin-top:1rem;" class="fade-in">All volunteers complete our agreement to align with our safety and insurance standards.</p>
+  <p style="font-size:12px;color:#b0b0b0;margin-top:1rem;" class="fade-in">All volunteers complete our agreement to align with our safety and insurance standards.</p>
 </section>
 
 <div class="email-bar">
