@@ -6,9 +6,9 @@
   --dark-gray: #161616;
   --mid-gray: #222222;
   --card-bg: #1c1c1c;
-  --light-gray: #a0a0a0;
-  --lighter-gray: #d0d0d0;
-  --body-text: #c8c8c8;
+  --light-gray: #b8b8b8;
+  --lighter-gray: #e0e0e0;
+  --body-text: #dcdcdc;
   --gold: #FDBF12;
   --gold-light: #fdd04a;
   --gold-dark: #c49100;
@@ -91,7 +91,7 @@ nav#top-nav {
   transition: padding 0.3s;
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; }
-.nav-logo img { height: 40px; width: auto; }
+.nav-logo img { height: 52px; width: auto; }
 .nav-links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
 .nav-links a {
   font-family: 'Barlow Condensed', sans-serif; font-size: 13px;
@@ -114,10 +114,10 @@ nav#top-nav {
   min-height: 55vh; display: flex; align-items: flex-end;
   overflow: hidden;
 }
-.page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: brightness(0.22); }
+.page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: brightness(0.38); }
 .page-hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to top, #0f0f0f 0%, rgba(10,10,10,0.3) 55%, transparent 100%);
+  background: linear-gradient(to top, #0f0f0f 0%, rgba(10,10,10,0.15) 50%, transparent 100%);
 }
 .page-hero-content { position: relative; max-width: 780px; }
 .page-hero-eyebrow {
@@ -140,11 +140,11 @@ nav#top-nav {
 .hero-bg {
   position: absolute; inset: 0;
   background-image: url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/a8337b04-69d4-4ddd-85ae-4023f42040be/454457859_1181241769877982_4024960473457995510_n.jpg');
-  background-size: cover; background-position: center top; filter: brightness(0.45);
+  background-size: cover; background-position: center top; filter: brightness(0.6);
 }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(160deg, rgba(10,10,10,0.25) 0%, rgba(10,10,10,0.6) 50%, rgba(10,10,10,0.93) 100%);
+  background: linear-gradient(160deg, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.45) 50%, rgba(10,10,10,0.82) 100%);
 }
 .hero-content { position: relative; max-width: 860px; }
 .hero-eyebrow {
