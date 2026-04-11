@@ -46,8 +46,21 @@ function togglePhase(num) {
   const cards = document.querySelectorAll('.stand-card');
   details.forEach(d => d.classList.remove('active'));
   cards.forEach(c => c.classList.remove('active'));
-  if (activePhase === num) { activePhase = null; return; }
+  if (activePhase === num) {
+    activePhase = null;
+    // Deselect phase map node and reset progress
+    document.querySelectorAll('.phase-node').forEach(n => n.classList.remove('active'));
+    const progress = document.getElementById('phase-progress');
+    if (progress) progress.style.width = '0%';
+    return;
+  }
   activePhase = num;
+  // Sync phase map node and progress bar
+  document.querySelectorAll('.phase-node').forEach(n => n.classList.remove('active'));
+  const node = document.querySelector('.phase-node[data-phase="' + num + '"]');
+  if (node) node.classList.add('active');
+  const progress = document.getElementById('phase-progress');
+  if (progress) progress.style.width = ((num - 1) / 4 * 100) + '%';
   const target = document.getElementById('detail-' + num);
   const card = document.getElementById('card-' + num);
   if (card) card.classList.add('active');

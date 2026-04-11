@@ -11,6 +11,7 @@ const NAV = `
     <li><a href="community.html">Community</a></li>
     <li><a href="impact.html">Impact</a></li>
     <li><a href="speaking.html">Speaking</a></li>
+    <li><a href="merch.html">Merch</a></li>
     <li><a href="https://iamredemption.com/donate" class="nav-cta">Donate</a></li>
   </ul>
   <div class="nav-hamburger" onclick="toggleMenu()">
