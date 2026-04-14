@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Merch | I Am Redemption</title>
+<title>Get Involved | I Am Redemption</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -16,9 +16,19 @@
     .footer-col h5 { color: var(--gold) !important; }
     .footer-bottom { color: #707070 !important; }
     .email-bar-text p { color: #e0e0e0 !important; }
+    .section-subtitle { color: #e0e0e0 !important; }
+    .page-hero-sub { color: #e0e0e0 !important; }
     p { color: #c8c8c8; }
+    .impact-block-text { color: #c4c4c4 !important; }
+    .form-privacy { color: #b8b8b8 !important; }
     @media (min-width: 961px) { .mobile-bottom-nav { display: none !important; } }
     @media (max-width: 960px) { .mobile-bottom-nav { display: flex !important; } }
+    .content-section .section-label,
+    .content-section .section-title,
+    .content-section .section-subtitle { position: relative; }
+    @media (max-width: 960px) {
+      .gi-two-col { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+    }
   </style>
 </head>
 <body>
@@ -31,30 +41,153 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="where-you-stand.html">Where You Stand</a></li>
     <li><a href="get-started.html">Get Started</a></li>
-    <li><a href="get-involved.html">Get Involved</a></li>
-    <li><a href="merch.html" class="active">Merch</a></li>
+    <li><a href="get-involved.html" class="active">Get Involved</a></li>
+    <li><a href="merch.html">Merch</a></li>
     <li><a href="https://givebutter.com/IAR" class="nav-cta">Donate</a></li>
   </ul>
   <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 
 <!-- PAGE HERO -->
-<section class="page-hero" style="background-image:url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/8825b60f-6102-4d1c-92f3-aa01d15e81c4/534541994_17941510155028615_2774412757570962117_n.jpg');">
-  <div class="page-hero-inner">
-    <div class="page-hero-eyebrow fade-in">Merch</div>
-    <h1 class="page-hero-title fade-in fade-in-d1">Wear the Mission.</h1>
-    <p class="page-hero-sub fade-in fade-in-d2">Every purchase supports the community directly.</p>
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/8825b60f-6102-4d1c-92f3-aa01d15e81c4/534541994_17941510155028615_2774412757570962117_n.jpg');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow fade-in">Get Involved</div>
+    <h1 class="page-hero-title fade-in fade-in-d1">BE PART<br>OF THE<br><em>BUILD.</em></h1>
+    <p class="page-hero-sub fade-in fade-in-d2">Support it. Share it. Help shape what comes next.</p>
+  </div>
+</div>
+
+<!-- VOLUNTEER SECTION -->
+<section class="content-section alt" id="volunteer" style="padding:5.5rem 2.5rem;">
+  <div class="gi-two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1100px;margin:0 auto;">
+    <div class="fade-in">
+      <div class="section-label">Volunteer</div>
+      <h2 class="section-title">Give your time.<br>Change a life.</h2>
+      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:1.5rem;">Help create the space people show up to. From runs to events to behind the scenes, volunteers make this work possible.</p>
+      <a href="https://form.jotform.com/260924104080043" target="_blank" class="btn-primary" style="font-size:15px;">Volunteer with Us</a>
+    </div>
+    <div class="fade-in fade-in-d1" style="background:var(--dark-gray);border-top:3px solid var(--gold);padding:3rem 2.5rem;">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:0.05em;color:var(--white);margin-bottom:0.5rem;">Ready to Volunteer?</h3>
+      <p style="font-size:14px;color:#e0e0e0;font-weight:300;line-height:1.7;margin-bottom:2rem;">Complete the official volunteer form to get started. Our team reviews submissions and connects you with upcoming opportunities.</p>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem;background:rgba(253,191,18,0.06);border:1px solid rgba(253,191,18,0.2);">
+          <div style="width:32px;height:32px;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--black);">1</div>
+          <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:3px;">Complete the Form</div><div style="font-size:13px;color:#c8c8c8;line-height:1.6;">Fill out the JotForm volunteer form linked below.</div></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem;background:rgba(253,191,18,0.06);border:1px solid rgba(253,191,18,0.2);">
+          <div style="width:32px;height:32px;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--black);">2</div>
+          <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:3px;">We'll Reach Out</div><div style="font-size:13px;color:#c8c8c8;line-height:1.6;">Our team reviews submissions and connects you with upcoming opportunities.</div></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem;background:rgba(253,191,18,0.06);border:1px solid rgba(253,191,18,0.2);">
+          <div style="width:32px;height:32px;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--black);">3</div>
+          <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:3px;">Show Up</div><div style="font-size:13px;color:#c8c8c8;line-height:1.6;">That's it. Come ready to serve.</div></div>
+        </div>
+      </div>
+      <a href="https://form.jotform.com/260924104080043" target="_blank" class="btn-primary" style="width:100%;text-align:center;margin-top:2rem;display:block;font-size:14px;">Volunteer with Us</a>
+    </div>
   </div>
 </section>
 
-<!-- MERCH GRID — removed duplicate header and subheader -->
-<section class="content-section mid" id="merch">
-  <div class="section-label fade-in">Shop</div>
-  <div class="merch-grid">
-    <a href="#" class="merch-card fade-in"><div class="merch-img-box"><span>IAR</span></div><div class="merch-info"><div class="merch-name">I Am Redemption Tee</div><div class="merch-price">$35</div></div><div class="merch-cta">Shop Now</div></a>
-    <a href="#" class="merch-card fade-in fade-in-d1"><div class="merch-img-box"><span>IAR</span></div><div class="merch-info"><div class="merch-name">Redemption Crew Hoodie</div><div class="merch-price">$65</div></div><div class="merch-cta">Shop Now</div></a>
-    <a href="#" class="merch-card fade-in fade-in-d2"><div class="merch-img-box"><span>IAR</span></div><div class="merch-info"><div class="merch-name">100 Miles Hat</div><div class="merch-price">$28</div></div><div class="merch-cta">Shop Now</div></a>
-    <a href="#" class="merch-card fade-in fade-in-d3"><div class="merch-img-box"><span>IAR</span></div><div class="merch-info"><div class="merch-name">Built Different Tee</div><div class="merch-price">$35</div></div><div class="merch-cta">Shop Now</div></a>
+<!-- SUBMIT YOUR STORY SECTION -->
+<section class="story-section" id="story">
+  <div class="story-inner">
+    <div class="fade-in">
+      <div class="section-label">Submit your Story</div>
+      <h2 class="section-title">Your Story Could<br>Save Someone's Life.</h2>
+      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:1.25rem;">Every story we share is proof that redemption is real. You don't have to have it all figured out. You just have to be honest.</p>
+      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:1.25rem;">We share stories on the podcast, in our content, and across the community. Your voice matters, and there's someone out there who needs to hear exactly what you've been through.</p>
+      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;">Stories can be shared anonymously. We review every submission personally.</p>
+    </div>
+    <div class="story-form-wrap fade-in fade-in-d1">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:0.05em;color:var(--white);margin-bottom:1.5rem;">Share Your Story</h3>
+      <div class="story-form">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-field" placeholder="Your name or anonymous"></div>
+          <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-field" placeholder="We'll reach out privately"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Phase</label>
+          <select class="form-field"><option value="">Where are you in the journey?</option><option>Phase 01 — Wake-Up</option><option>Phase 02 — Built by Pain</option><option>Phase 03 — Built Different</option><option>Phase 04 — Powered by Purpose</option><option>Phase 05 — What Comes After</option></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Story</label>
+          <textarea class="form-field" rows="6" placeholder="Tell us what happened. Where you were, what changed, where you are now. Don't edit yourself. We want the real version."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">How can we share this?</label>
+          <select class="form-field"><option>Use my name — I own it</option><option>First name only</option><option>Fully anonymous</option><option>Contact me first before sharing</option></select>
+        </div>
+        <div class="form-privacy">Your story is treated with care. We never share without permission. Submissions are reviewed by a real person, not a bot.</div>
+        <button class="btn-primary" style="width:100%;border:none;font-size:15px;margin-top:0.25rem;" onclick="submitStory()">Submit My Story</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS SECTION -->
+<section class="content-section dark" id="partner" style="padding:5.5rem 2.5rem;">
+  <div class="gi-two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:1100px;margin:0 auto;">
+    <div class="fade-in">
+      <div class="section-label">Partners</div>
+      <h2 class="section-title">Partner<br>With Us.</h2>
+      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:1.5rem;">We're looking for organizations, businesses, and individuals who want to align with something real. Recovery. Community. Purpose.</p>
+      <div class="impact-aside" style="margin-bottom:2rem;">
+        <div class="impact-block"><div class="impact-block-title">Mission Alignment</div><div class="impact-block-text">Partner with an organization built around recovery, resilience, and real community impact.</div></div>
+        <div class="impact-block"><div class="impact-block-title">Visibility &amp; Mission</div><div class="impact-block-text">Partners are recognized across our channels and events. Show your community you stand for something.</div></div>
+      </div>
+      <a href="get-involved.html#contact" class="btn-primary">Start a Partnership</a>
+    </div>
+    <div class="fade-in fade-in-d1" style="background:var(--dark-gray);border-top:3px solid var(--gold);padding:3rem 2.5rem;">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.05em;color:var(--white);margin-bottom:1rem;">Why Partner With IAR?</h3>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem;background:rgba(253,191,18,0.06);border:1px solid rgba(253,191,18,0.2);">
+          <div style="width:10px;height:10px;background:var(--gold);flex-shrink:0;margin-top:5px;border-radius:50%;"></div>
+          <div style="font-size:14px;color:#c8c8c8;line-height:1.6;">Community reach across Austin and growing digital presence</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem;background:rgba(253,191,18,0.06);border:1px solid rgba(253,191,18,0.2);">
+          <div style="width:10px;height:10px;background:var(--gold);flex-shrink:0;margin-top:5px;border-radius:50%;"></div>
+          <div style="font-size:14px;color:#c8c8c8;line-height:1.6;">Podcast, events, and social channels for authentic storytelling</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.25rem;background:rgba(253,191,18,0.06);border:1px solid rgba(253,191,18,0.2);">
+          <div style="width:10px;height:10px;background:var(--gold);flex-shrink:0;margin-top:5px;border-radius:50%;"></div>
+          <div style="font-size:14px;color:#c8c8c8;line-height:1.6;">Direct support of recovery-focused programming that changes lives</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKING / BOOK SHAWN SECTION -->
+<section class="content-section alt" id="speaking" style="padding:5.5rem 2.5rem;">
+  <div class="gi-two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1100px;margin:0 auto;">
+    <div class="fade-in">
+      <div class="section-label">Speaking Engagements</div>
+      <h2 class="section-title">Shawn Livingston</h2>
+      <p style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;">Combat Veteran · Ultra Runner · Founder of I Am Redemption · Subject of the documentary 100 Miles to Redemption</p>
+      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:1rem;">Shawn shares real experiences on recovery, discipline, and rebuilding. From small groups to larger events, the focus stays the same: honest conversations people can relate to.</p>
+      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:2rem;">Topics include recovery, mental health, discipline, endurance, and community.</p>
+      <a href="#contact" class="btn-primary">Book Shawn</a>
+    </div>
+    <div class="fade-in fade-in-d1">
+      <img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/a8337b04-69d4-4ddd-85ae-4023f42040be/454457859_1181241769877982_4024960473457995510_n.jpg" alt="Shawn Livingston" style="width:100%;display:block;">
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="content-section dark" id="contact" style="padding:5.5rem 2.5rem;">
+  <div style="max-width:700px;margin:0 auto;">
+    <div class="section-label center fade-in" style="text-align:center;">General Inquiries</div>
+    <h2 class="section-title fade-in" style="text-align:center;">Contact Us</h2>
+    <p class="section-subtitle fade-in" style="text-align:center;margin:0 auto 2.5rem;">For anything else, send us a message.</p>
+    <div class="story-form fade-in" style="max-width:600px;margin:0 auto;">
+      <div class="form-group"><label class="form-label">Name</label><input type="text" class="form-field" placeholder="Your name"></div>
+      <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-field" placeholder="Your email address"></div>
+      <div class="form-group"><label class="form-label">Message</label><textarea class="form-field" rows="6" placeholder="How can we help?"></textarea></div>
+      <button class="btn-primary" style="width:100%;border:none;font-size:15px;margin-top:0.5rem;" onclick="submitContact()">Send Message</button>
+    </div>
   </div>
 </section>
 
@@ -115,10 +248,24 @@
   <a href="index.html" class="mbn-item"><div class="mbn-icon">⌂</div><div class="mbn-label">Home</div></a>
   <a href="where-you-stand.html" class="mbn-item"><div class="mbn-icon">◈</div><div class="mbn-label">Journey</div></a>
   <a href="get-started.html" class="mbn-item"><div class="mbn-icon">◎</div><div class="mbn-label">Get Started</div></a>
-  <a href="get-involved.html" class="mbn-item"><div class="mbn-icon">▷</div><div class="mbn-label">Get Involved</div></a>
+  <a href="get-involved.html" class="mbn-item active"><div class="mbn-icon">▷</div><div class="mbn-label">Get Involved</div></a>
   <a href="https://givebutter.com/IAR" class="mbn-item mbn-donate"><div class="mbn-icon">♡</div><div class="mbn-label">Donate</div></a>
 </nav>
 
 <script src="shared.js"></script>
+<script>
+function submitStory() {
+  const btn = event.currentTarget;
+  btn.textContent = "Story Submitted. Thank You.";
+  btn.style.background = '#3b6d11';
+  setTimeout(() => { btn.textContent = "Submit My Story"; btn.style.background = ''; }, 4000);
+}
+function submitContact() {
+  const btn = event.currentTarget;
+  btn.textContent = "Message Sent. Thank You.";
+  btn.style.background = '#3b6d11';
+  setTimeout(() => { btn.textContent = "Send Message"; btn.style.background = ''; }, 4000);
+}
+</script>
 </body>
 </html>

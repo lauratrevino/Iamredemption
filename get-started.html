@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Merch | I Am Redemption</title>
+<title>Get Started | I Am Redemption</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -16,9 +16,23 @@
     .footer-col h5 { color: var(--gold) !important; }
     .footer-bottom { color: #707070 !important; }
     .email-bar-text p { color: #e0e0e0 !important; }
+    .section-subtitle { color: #e0e0e0 !important; }
+    .page-hero-sub { color: #e0e0e0 !important; }
     p { color: #c8c8c8; }
+    .impact-block-text { color: #c4c4c4 !important; }
+    .event-details { color: #c4c4c4 !important; }
+    .ep-desc { color: #bcbcbc !important; }
+    .form-privacy { color: #b8b8b8 !important; }
+    .speaking-topic { color: #d4d4d4 !important; }
     @media (min-width: 961px) { .mobile-bottom-nav { display: none !important; } }
     @media (max-width: 960px) { .mobile-bottom-nav { display: flex !important; } }
+    .content-section .section-label,
+    .content-section .section-title,
+    .content-section .section-subtitle { position: relative; }
+    .platform-links { display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.5rem; }
+    .platform-link { display:inline-flex; align-items:center; gap:0.5rem; background:rgba(253,191,18,0.08); border:1px solid rgba(253,191,18,0.25); color:var(--gold); text-decoration:none; padding:0.65rem 1.25rem; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; transition:background 0.2s; }
+    .platform-link:hover { background:rgba(253,191,18,0.18); }
+    @media (max-width: 960px) { .volunteer-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; } }
   </style>
 </head>
 <body>
@@ -30,31 +44,127 @@
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="where-you-stand.html">Where You Stand</a></li>
-    <li><a href="get-started.html">Get Started</a></li>
+    <li><a href="get-started.html" class="active">Get Started</a></li>
     <li><a href="get-involved.html">Get Involved</a></li>
-    <li><a href="merch.html" class="active">Merch</a></li>
+    <li><a href="merch.html">Merch</a></li>
     <li><a href="https://givebutter.com/IAR" class="nav-cta">Donate</a></li>
   </ul>
   <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 
 <!-- PAGE HERO -->
-<section class="page-hero" style="background-image:url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/8825b60f-6102-4d1c-92f3-aa01d15e81c4/534541994_17941510155028615_2774412757570962117_n.jpg');">
-  <div class="page-hero-inner">
-    <div class="page-hero-eyebrow fade-in">Merch</div>
-    <h1 class="page-hero-title fade-in fade-in-d1">Wear the Mission.</h1>
-    <p class="page-hero-sub fade-in fade-in-d2">Every purchase supports the community directly.</p>
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/8825b60f-6102-4d1c-92f3-aa01d15e81c4/534541994_17941510155028615_2774412757570962117_n.jpg');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow fade-in">Community Runs &amp; Events</div>
+    <h1 class="page-hero-title fade-in fade-in-d1">Where<br>people<br><em>show up.</em></h1>
+    <p class="page-hero-sub fade-in fade-in-d2">Everyone is welcome. All paces. All places. Show up once and let the community do the rest.</p>
+  </div>
+</div>
+
+<!-- EVENTS GRID -->
+<section class="content-section dark" id="events" style="padding:5.5rem 2.5rem;">
+  <div class="events-grid">
+
+    <!-- Monday Men's Meeting -->
+    <div class="event-card fade-in">
+      <div class="event-tag">Peer Support</div>
+      <div class="event-name">Monday Men's Meeting</div>
+      <div class="event-details">
+        <strong>Every Monday 6–8 PM CST</strong><br>
+        701 Tillery St Suite C<br>
+        Austin, TX 78702 (Squatch Frontier Fitness)<br><br>
+        A weekly men's meeting around the bonfire. A place to talk, listen, and be around others who get it.<br><br>
+        Open to all men, wherever you are in the process.<br>
+        Food and drinks provided. During warmer months, meetings are held indoors with A/C.
+      </div>
+    </div>
+
+    <!-- Redemption Crew Runs -->
+    <div class="event-card fade-in fade-in-d1">
+      <div class="event-tag">Community Runs</div>
+      <div class="event-name">Redemption Crew Runs</div>
+      <div class="event-details">
+        <strong>Tuesdays &amp; Thursdays</strong><br>
+        6920 Menchaca Rd<br>
+        Austin, TX 78745<br>
+        (Sprouts parking lot)<br>
+        Early miles: 5:15 AM CST<br>
+        Main group: 6:00 AM CST<br><br>
+        <strong>Saturdays – 7:30 AM CST</strong><br>
+        515 S Pleasant Valley Rd<br>
+        Austin, TX 78741<br>
+        Short route: ~2 miles (walk/jog friendly)<br>
+        Long route: ~6 miles<br><br>
+        Open to all paces. Just show up.
+      </div>
+    </div>
+
+    <!-- Thursday Check-Ins (Zoom) -->
+    <div class="event-card fade-in fade-in-d2">
+      <div class="event-tag">Virtual Support</div>
+      <div class="event-name">Thursday Check-Ins</div>
+      <div class="event-details">
+        <strong>Every Thursday</strong><br>
+        6–7 PM CST<br>
+        Zoom<br><br>
+        Meeting ID: 861 8811 5130<br>
+        Passcode: REDEMPTION<br><br>
+        A weekly call to check in. Talk if you want to, or just listen. Open to everyone.
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- MERCH GRID — removed duplicate header and subheader -->
-<section class="content-section mid" id="merch">
-  <div class="section-label fade-in">Shop</div>
-  <div class="merch-grid">
-    <a href="#" class="merch-card fade-in"><div class="merch-img-box"><span>IAR</span></div><div class="merch-info"><div class="merch-name">I Am Redemption Tee</div><div class="merch-price">$35</div></div><div class="merch-cta">Shop Now</div></a>
-    <a href="#" class="merch-card fade-in fade-in-d1"><div class="merch-img-box"><span>IAR</span></div><div class="merch-info"><div class="merch-name">Redemption Crew Hoodie</div><div class="merch-price">$65</div></div><div class="merch-cta">Shop Now</div></a>
-    <a href="#" class="merch-card fade-in fade-in-d2"><div class="merch-img-box"><span>IAR</span></div><div class="merch-info"><div class="merch-name">100 Miles Hat</div><div class="merch-price">$28</div></div><div class="merch-cta">Shop Now</div></a>
-    <a href="#" class="merch-card fade-in fade-in-d3"><div class="merch-img-box"><span>IAR</span></div><div class="merch-info"><div class="merch-name">Built Different Tee</div><div class="merch-price">$35</div></div><div class="merch-cta">Shop Now</div></a>
+<!-- PODCAST SECTION -->
+<section class="content-section alt" id="podcast" style="padding:5.5rem 2.5rem;">
+  <div class="section-label fade-in">Podcast</div>
+  <h2 class="section-title fade-in">Real Stories.<br>Real Recovery.</h2>
+  <p class="section-subtitle fade-in" style="max-width:700px;margin-bottom:1.5rem;">Every episode is proof that redemption is real. New episodes every Tuesday on YouTube and all major platforms.</p>
+
+  <!-- Platform Links -->
+  <div class="platform-links fade-in">
+    <a href="https://youtube.com/@IAm.Redemption/podcasts" target="_blank" class="platform-link">YouTube</a>
+    <a href="https://open.spotify.com/show/44F8FHatPeGC0FcFT6gMmS" target="_blank" class="platform-link">Spotify</a>
+    <a href="https://podcasts.apple.com/us/podcast/i-am-redemption-podcast/id1719303836" target="_blank" class="platform-link">Apple Podcasts</a>
+    <a href="https://podcast.ausha.co/i-am-redemption-podcast" target="_blank" class="platform-link">All Episodes</a>
+  </div>
+
+  <!-- Featured Episode -->
+  <div style="margin-top:3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1100px;">
+    <div class="fade-in">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;">Latest Episode</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);letter-spacing:0.04em;color:var(--white);line-height:1.05;margin-bottom:0.75rem;">I Am A Son Of God</h3>
+      <p style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;">Guest: Clayton McMurry, Air Force Special Operations</p>
+      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;">Shawn sits down with Air Force Special Operations veteran Clayton McMurry, who guarded the President, deployed on high-level missions, and was part of a global cave rescue that captured the world's attention. One of the most powerful conversations to date.</p>
+    </div>
+    <div class="fade-in fade-in-d1" style="background:var(--dark-gray);border-top:3px solid var(--gold);padding:2.5rem 2rem;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.06em;color:var(--white);margin-bottom:1rem;">Listen Now</div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <a href="https://youtube.com/@IAm.Redemption/podcasts" target="_blank" class="btn-primary" style="text-align:center;">YouTube</a>
+        <a href="https://open.spotify.com/show/44F8FHatPeGC0FcFT6gMmS" target="_blank" class="btn-outline" style="text-align:center;">Spotify</a>
+        <a href="https://podcasts.apple.com/us/podcast/i-am-redemption-podcast/id1719303836" target="_blank" class="btn-outline" style="text-align:center;">Apple Podcasts</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKING SECTION -->
+<section class="content-section dark" id="speaking" style="padding:5.5rem 2.5rem;">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+    <div class="fade-in">
+      <div class="section-label">Speaking Engagements</div>
+      <h2 class="section-title">Shawn Livingston</h2>
+      <p style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;">Combat Veteran · Ultra Runner · Founder of I Am Redemption · Subject of the documentary 100 Miles to Redemption</p>
+      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:1rem;">Shawn shares real experiences on recovery, discipline, and rebuilding. From small groups to larger events, the focus stays the same: honest conversations people can relate to.</p>
+      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:2rem;">Topics include recovery, mental health, discipline, endurance, and community.</p>
+      <a href="get-involved.html#speaking" class="btn-primary">Book Shawn</a>
+    </div>
+    <div class="fade-in fade-in-d1">
+      <img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/a8337b04-69d4-4ddd-85ae-4023f42040be/454457859_1181241769877982_4024960473457995510_n.jpg" alt="Shawn Livingston speaking" style="width:100%;display:block;">
+    </div>
   </div>
 </section>
 
@@ -114,7 +224,7 @@
 <nav class="mobile-bottom-nav">
   <a href="index.html" class="mbn-item"><div class="mbn-icon">⌂</div><div class="mbn-label">Home</div></a>
   <a href="where-you-stand.html" class="mbn-item"><div class="mbn-icon">◈</div><div class="mbn-label">Journey</div></a>
-  <a href="get-started.html" class="mbn-item"><div class="mbn-icon">◎</div><div class="mbn-label">Get Started</div></a>
+  <a href="get-started.html" class="mbn-item active"><div class="mbn-icon">◎</div><div class="mbn-label">Get Started</div></a>
   <a href="get-involved.html" class="mbn-item"><div class="mbn-icon">▷</div><div class="mbn-label">Get Involved</div></a>
   <a href="https://givebutter.com/IAR" class="mbn-item mbn-donate"><div class="mbn-icon">♡</div><div class="mbn-label">Donate</div></a>
 </nav>
