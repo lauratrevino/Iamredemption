@@ -66,6 +66,12 @@ function togglePhase(num) {
   if (card) card.classList.add('active');
   if (target && card) {
     card.parentNode.insertBefore(target, card.nextSibling);
+    // Calculate arrow position relative to detail panel
+    const cardRect = card.getBoundingClientRect();
+    const gridRect = card.parentNode.getBoundingClientRect();
+    const arrowLeft = (cardRect.left - gridRect.left) + (cardRect.width / 2) - 10;
+    const arrowPct = Math.max(2, Math.min(95, (arrowLeft / gridRect.width) * 100));
+    target.style.setProperty('--detail-arrow-left', arrowPct + '%');
     target.classList.add('active');
     setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 30);
   }

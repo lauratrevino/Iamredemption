@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get Involved | I Am Redemption</title>
+<title>I Am Redemption | Home</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -20,7 +20,13 @@
     .page-hero-sub { color: #e0e0e0 !important; }
     p { color: #c8c8c8; }
     .impact-block-text { color: #c4c4c4 !important; }
+    .event-details { color: #c4c4c4 !important; }
+    .ep-desc { color: #bcbcbc !important; }
+    .stand-card-desc { color: #c0c0c0 !important; }
+    .stand-detail-block p { color: #e0e0e0 !important; }
+    .tier-impact { color: #c4c4c4 !important; }
     .form-privacy { color: #b8b8b8 !important; }
+    .speaking-topic { color: #d4d4d4 !important; }
     /* Mobile responsive helpers */
     @media (max-width: 768px) {
       [style*="display:grid"], [style*="display: grid"] {
@@ -42,9 +48,8 @@
     .content-section .section-label,
     .content-section .section-title,
     .content-section .section-subtitle { position: relative; }
-    @media (max-width: 960px) {
-      .gi-two-col { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
-    }
+    .video-section p { color: #e0e0e0 !important; }
+    .mission-text p { color: #cccccc !important; }
   </style>
 </head>
 <body>
@@ -57,118 +62,87 @@
   <div class="nav-tagline" style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#FFFFFF;margin-left:1.5rem;white-space:nowrap;align-self:center;">BUILT DIFFERENT. POWERED DIFFERENT.</div>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
     <li><a href="where-you-stand.html">Where You Stand</a></li>
     <li><a href="get-started.html">Get Started</a></li>
-    <li><a href="get-involved.html" class="active">Get Involved</a></li>
+    <li><a href="get-involved.html">Get Involved</a></li>
     <li><a href="merch.html">Merch</a></li>
     <li><a href="https://givebutter.com/IAR" class="nav-cta">Donate</a></li>
   </ul>
   <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- PAGE HERO -->
-<div class="page-hero">
-  <div class="page-hero-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/8825b60f-6102-4d1c-92f3-aa01d15e81c4/534541994_17941510155028615_2774412757570962117_n.jpg');"></div>
-  <div class="page-hero-overlay"></div>
-  <div class="page-hero-content">
-    <div class="page-hero-eyebrow fade-in">Get Involved</div>
-    <h1 class="page-hero-title fade-in fade-in-d1">Be Part of the <em>Build.</em></h1>
-    <p class="page-hero-sub fade-in fade-in-d2">Support it. Share it. Help shape what comes next.</p>
-  </div>
-</div>
-
-<!-- VOLUNTEER SECTION -->
-<section class="content-section alt" id="volunteer" style="padding:5.5rem 2.5rem;">
-  <div style="max-width:1100px;margin:0 auto;">
-    <div class="fade-in">
-      <div class="section-label">Volunteer</div>
-      <h2 class="section-title">Give your time.<br>Change a life.</h2>
-      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:1.5rem;max-width:600px;">Help create the space people show up to. From runs to events to behind the scenes, volunteers make this work possible.</p>
-      <script src="https://cdn.jotfor.ms/s/static/latest/static/feedback2.js" type="text/javascript"></script>
-      <script type="text/javascript">
-        var JFL_260924104080043 = new JotformFeedback({
-          formId: '260924104080043',
-          base: 'https://form.jotform.com/',
-          windowTitle: 'Volunteer Onboarding &amp; Agreement',
-          backgroundColor: '#fdbf12',
-          fontColor: '#000000',
-          type: '2',
-          height: 500,
-          width: 700,
-          openOnLoad: false
-        });
-      </script>
-      <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-      <script>window.jotformEmbedHandler("iframe[id='260924104080043']", "https://form.jotform.com/")</script>
-      <a class="btn lightbox-260924104080043" style="margin-top:16px;text-transform:uppercase;font-size:14px;text-decoration:none;cursor:pointer;display:inline-block;padding:10px 20px;font-family:inherit;text-shadow:none;user-select:none;transition:all .1s ease-in;background-color:#fdbf12;border:1px solid #fdbf12;color:#000000;font-weight:700;letter-spacing:0.1em;">Volunteer With Us</a>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow fade-in">I Am Redemption</div>
+    <h1 class="fade-in fade-in-d1" style="font-size:clamp(28px,5vw,80px);line-height:1.0;">BUILT DIFFERENT BY PAIN.<br>POWERED DIFFERENT BY PURPOSE.</h1>
+    <p class="hero-sub fade-in fade-in-d2" style="color:#d8d8d8;">Your past doesn't break you, it builds you.</p>
+    <div class="hero-actions fade-in fade-in-d3">
+      <a href="where-you-stand.html" class="btn-primary">Where Do You Stand</a>
+      <a href="https://givebutter.com/IAR" class="btn-outline">Support the Mission</a>
     </div>
   </div>
 </section>
 
-<!-- SUBMIT YOUR STORY SECTION -->
-<section class="story-section" id="story">
-  <div class="story-inner">
-    <div class="fade-in">
-      <div class="section-label">Submit your Story</div>
-      <h2 class="section-title">Your Story Could<br>Save Someone's Life.</h2>
-      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:1.25rem;">Every story we share is proof that redemption is real. You don't have to have it all figured out. You just have to be honest.</p>
-      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:1.25rem;">We share stories on the podcast, in our content, and across the community. Your voice matters, and there's someone out there who needs to hear exactly what you've been through.</p>
-      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;">Stories can be shared anonymously. We review every submission personally.</p>
+<!-- MISSION STRIP -->
+<section class="mission-strip" style="padding:5rem 2.5rem;">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+    <div class="mission-text fade-in">
+      <div class="section-label">Our Mission</div>
+      <h2 class="section-title">Everyone is recovering<br>from something.</h2>
+      <p>This didn't start as an organization. It started with someone trying to get his life back. After serving in the military, struggling with addiction, and facing prison, he found the running community. It didn't fix everything, but it gave him structure and put him around people who showed up.</p>
+      <p>I Am Redemption exists because a lot of people are carrying things they don't always talk about — addiction, trauma, loss, feeling stuck, or just trying to make it through the day. We're trying to make it normal for people to show up in the middle of whatever they're working through.</p>
+      <p>People come for different reasons. For some, it's moving their body with others. For others, it's having a place to talk or listen. And for many, it's simply being around others who understand what it feels like to not have everything figured out.</p>
+      <p>IAR is founded by combat veteran and ultra runner <strong>Shawn Livingston</strong>, whose story is documented in <em>100 Miles to Redemption</em>.</p>
     </div>
-    <div class="story-form-wrap fade-in fade-in-d1">
-      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:0.05em;color:var(--white);margin-bottom:1.5rem;">Share Your Story</h3>
-      <div class="story-form">
-        <div class="form-row">
-          <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-field" placeholder="Your name or anonymous"></div>
-          <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-field" placeholder="We'll reach out privately"></div>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Your Story</label>
-          <textarea class="form-field" rows="6" placeholder="Tell us what happened. Where you were, what changed, where you are now. Don't edit yourself. We want the real version."></textarea>
-        </div>
-        <div class="form-privacy">Your story is treated with care. We never share without permission.</div>
-        <button class="btn-primary" style="width:100%;border:none;font-size:15px;margin-top:0.25rem;" onclick="submitStory()">Submit My Story</button>
+    <div class="mission-images fade-in fade-in-d2">
+      <div style="position:relative;">
+        <img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/6e744e41-7d75-4bb2-8646-0f9686bcde8e/602893532_17954290437028615_1809779032490499039_n.jpg" alt="Community run" style="width:80%;display:block;border-top:3px solid var(--gold);margin-left:auto;">
+        <img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/8825b60f-6102-4d1c-92f3-aa01d15e81c4/534541994_17941510155028615_2774412757570962117_n.jpg" alt="Support" style="width:80%;display:block;border-top:3px solid var(--gold);margin-right:auto;margin-top:-3rem;box-shadow:8px 8px 0 rgba(253,191,18,0.25);">
       </div>
     </div>
   </div>
 </section>
 
-<!-- PARTNERS SECTION (repurposed as Contact) -->
-<section class="content-section dark" id="partner" style="padding:5.5rem 2.5rem;background:#161616 !important;">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:1100px;margin:0 auto;">
-    <div class="fade-in">
-      <div class="section-label">EVERYTHING ELSE</div>
-      <h2 class="section-title">Contact Us</h2>
-      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:2.5rem;">For partnerships, general questions, or booking Shawn — send us a message.</p>
-      <div class="story-form" id="contact-form">
-        <div class="form-group">
-          <label class="form-label">I'M CONTACTING ABOUT</label>
-          <select class="form-field" id="contacting-about-select">
-            <option value="">Select a topic</option>
-            <option>Partnership</option>
-            <option>General Question</option>
-            <option>Booking Shawn</option>
-          </select>
-        </div>
-        <div class="form-group"><label class="form-label">NAME</label><input type="text" class="form-field" placeholder="Your name"></div>
-        <div class="form-group"><label class="form-label">EMAIL</label><input type="email" class="form-field" placeholder="Your email address"></div>
-        <div class="form-group"><label class="form-label">MESSAGE</label><textarea class="form-field" rows="5" placeholder="How can we help?"></textarea></div>
-        <button class="btn-primary" style="width:100%;border:none;font-size:15px;margin-top:0.5rem;" onclick="submitContact()">SEND MESSAGE</button>
+<!-- DOCUMENTARY TRAILER -->
+<section class="video-section">
+  <div class="section-inner">
+    <div class="video-text fade-in">
+      <div class="section-label">The Documentary</div>
+      <h2 class="section-title">100 Miles<br>to Redemption</h2>
+      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:1.5rem;">A raw, unfiltered look at what it means to fall completely and choose to rise anyway. Army veteran Shawn Livingston confronts heroin addiction, PTSD, and everything behind him, with a 100-mile trail race forcing the question of who he's going to be.</p>
+      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:2rem;">Available on Prime Video and Tubi.</p>
+      <div class="btn-row">
+        <a href="https://www.amazon.com/100-Miles-Redemption-Shawn-Livingston/dp/B0B18DPRZ1" target="_blank" class="btn-primary">Watch Free on Prime Video</a>
+        <a href="https://tubitv.com/movies/675760/100-miles-to-redemption" target="_blank" class="btn-outline">Watch Free on Tubi</a>
       </div>
     </div>
-    <div class="fade-in fade-in-d1" style="padding-top:3rem;">
-      <div class="impact-aside">
-        <div class="impact-block"><div class="impact-block-title">BUILT ON REAL IMPACT</div><div class="impact-block-text">We build with people who care about recovery and community. If that's you, let's talk.</div></div>
-        <div class="impact-block"><div class="impact-block-title">STAND FOR SOMETHING REAL</div><div class="impact-block-text">If you want your community to know you support recovery and accountability, we're here for it.</div></div>
-        <div class="impact-block"><div class="impact-block-title">INVITE SHAWN TO SPEAK</div><div class="impact-block-text">Shawn brings lived experience, honesty, and perspective that connects with people in a real way.</div></div>
+    <div class="video-embed fade-in fade-in-d1">
+      <div class="video-wrapper">
+        <!-- Official trailer embed — IMDb vi2476917273 maps to YouTube ID below.
+             If this ID stops working, replace with the actual YouTube video ID from
+             youtube.com/watch?v=XXXX on the film's official channel. -->
+        <iframe
+          id="trailer-iframe"
+          src="https://www.youtube.com/embed/tDz6q9JNO6c?rel=0&modestbranding=1"
+          title="100 Miles to Redemption — Official Trailer"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="video-fallback" id="video-fallback" style="display:none;">
+        <div class="video-fallback-inner">
+          <div class="play-circle" onclick="openTrailer()">▶</div>
+          <p>Watch the Official Trailer</p>
+          <a href="https://www.imdb.com/video/vi2476917273/" target="_blank" class="btn-outline" style="margin-top:1rem;">Open on IMDb</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Contact moved to Partners section above (id="partner") -->
-<div id="contact"></div>
 
 <div class="email-bar">
   <div class="email-bar-inner">
@@ -212,7 +186,7 @@
       <h5>Connect</h5>
       <ul>
         <li><a href="get-involved.html#story">Submit Your Story</a></li>
-        <li><a href="get-involved.html#contact-form">Book Shawn</a></li>
+        <li><a href="get-involved.html#speaking">Book Shawn</a></li>
         <li><a href="get-involved.html#contact">Contact</a></li>
       </ul>
     </div>
@@ -223,46 +197,24 @@
   </div>
 </footer>
 
+<!-- MOBILE BOTTOM NAV -->
 <nav class="mobile-bottom-nav">
-  <a href="index.html" class="mbn-item"><div class="mbn-icon">⌂</div><div class="mbn-label">Home</div></a>
+  <a href="index.html" class="mbn-item active"><div class="mbn-icon">⌂</div><div class="mbn-label">Home</div></a>
   <a href="where-you-stand.html" class="mbn-item"><div class="mbn-icon">◈</div><div class="mbn-label">Journey</div></a>
   <a href="get-started.html" class="mbn-item"><div class="mbn-icon">◎</div><div class="mbn-label">Get Started</div></a>
-  <a href="get-involved.html" class="mbn-item active"><div class="mbn-icon">▷</div><div class="mbn-label">Get Involved</div></a>
+  <a href="get-involved.html" class="mbn-item"><div class="mbn-icon">▷</div><div class="mbn-label">Get Involved</div></a>
   <a href="https://givebutter.com/IAR" class="mbn-item mbn-donate"><div class="mbn-icon">♡</div><div class="mbn-label">Donate</div></a>
 </nav>
 
 <script src="shared.js"></script>
 <script>
-function submitStory() {
-  const btn = event.currentTarget;
-  btn.textContent = "Story Submitted. Thank You.";
-  btn.style.background = '#3b6d11';
-  setTimeout(() => { btn.textContent = "Submit My Story"; btn.style.background = ''; }, 4000);
-}
-function submitContact() {
-  const btn = event.currentTarget;
-  btn.textContent = "Message Sent. Thank You.";
-  btn.style.background = '#3b6d11';
-  setTimeout(() => { btn.textContent = "Send Message"; btn.style.background = ''; }, 4000);
-}
-// Auto-select "Booking Shawn" when arriving via Book Shawn button
-window.addEventListener('DOMContentLoaded', function() {
-  if (window.location.hash === '#contact-form') {
-    const sel = document.getElementById('contacting-about-select');
-    if (sel) {
-      for (let i = 0; i < sel.options.length; i++) {
-        if (sel.options[i].text === 'Booking Shawn') {
-          sel.selectedIndex = i;
-          break;
-        }
-      }
-    }
-    setTimeout(function() {
-      const el = document.getElementById('contact-form');
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 300);
-  }
+document.getElementById('trailer-iframe').addEventListener('error', function() {
+  this.style.display = 'none';
+  document.getElementById('video-fallback').style.display = 'flex';
 });
+function openTrailer() {
+  window.open('https://www.imdb.com/video/vi2476917273/', '_blank');
+}
 </script>
 </body>
 </html>
