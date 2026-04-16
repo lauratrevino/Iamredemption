@@ -86,7 +86,7 @@ nav#top-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1rem 2.5rem;
-  background: rgba(10,10,10,0.98); backdrop-filter: blur(14px);
+  background: rgba(18,34,8,0.98); backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(253,191,18,0.18);
   transition: padding 0.3s;
 }
@@ -110,8 +110,8 @@ nav#top-nav {
 
 /* ── PAGE HERO (inner pages) ── */
 .page-hero {
-  position: relative; padding: 10rem 2.5rem 5rem;
-  min-height: 55vh; display: flex; align-items: flex-end;
+  position: relative; padding: 7rem 2.5rem 3rem;
+  min-height: 45vh; display: flex; align-items: flex-end;
   overflow: hidden;
 }
 .page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: brightness(0.38); }
@@ -133,9 +133,9 @@ nav#top-nav {
 
 /* ── HERO (home) ── */
 .hero {
-  position: relative; min-height: 100vh;
+  position: relative; min-height: 90vh;
   display: flex; flex-direction: column; justify-content: center;
-  padding: 100px 2.5rem 5rem; overflow: hidden;
+  padding: 80px 2.5rem 3.5rem; overflow: hidden;
 }
 .hero-bg {
   position: absolute; inset: 0;
@@ -243,7 +243,7 @@ nav#top-nav {
 
 /* ── FOOTER ── */
 footer {
-  background: #080808; padding: 5rem 2.5rem 2.5rem;
+  background: #1e2e10; padding: 5rem 2.5rem 2.5rem;
   border-top: 2px solid rgba(253,191,18,0.3);
 }
 .footer-grid {
