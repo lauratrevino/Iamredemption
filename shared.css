@@ -140,8 +140,8 @@ nav#top-nav {
 /* ── HERO (home) ── */
 .hero {
   position: relative; min-height: 75vh;
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 70px 2.5rem 2.5rem; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: flex-start;
+  padding: 100px 2.5rem 3rem; overflow: hidden;
 }
 .hero-bg {
   position: absolute; inset: 0;
