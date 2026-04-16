@@ -9,10 +9,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
   <style>
-    footer { background: #1e2e10 !important; }
+    footer { background: #122208 !important; }
     .footer-col ul a { color: #c0c0c0 !important; font-size: 14px !important; }
     .footer-col ul a:hover { color: var(--gold) !important; }
-    .footer-brand p { color: #b8b8b8 !important; font-size: 14px !important; }
+    .footer-brand p { color: #b0b0b0 !important; font-size: 14px !important; }
     .footer-col h5 { color: var(--gold) !important; }
     .footer-bottom { color: #707070 !important; }
     .email-bar-text p { color: #e0e0e0 !important; }
@@ -111,67 +111,78 @@
 <!-- PHASE CARDS -->
 <div class="content-section alt" style="padding-top:2rem;">
   <div class="stand-grid" id="phases">
-    <div class="stand-card fade-in" onclick="togglePhase(1)" id="card-1">
-      <div class="stand-card-phase">Phase 01</div>
-      <div class="stand-card-number">01</div>
-      <div class="stand-card-title">Wake-Up</div>
-      <div class="stand-card-desc">The moment you realize something has to change.</div>
+    <div class="stand-card-wrap fade-in" id="wrap-1">
+      <div class="stand-card" onclick="togglePhase(1)" id="card-1">
+        <div class="stand-card-phase">Phase 01</div>
+        <div class="stand-card-number">01</div>
+        <div class="stand-card-title">Wake-Up</div>
+        <div class="stand-card-desc">The moment you realize something has to change.</div>
+        <div class="stand-card-arrow" id="arrow-1">▾</div>
+      </div>
+      <div class="stand-detail" id="detail-1">
+        <div class="stand-detail-block"><h4>What This Looks Like</h4><p>You may notice your mindset isn't where it should be, your routine is slipping, or you're not showing up the way you know you can. Something feels off, even if you haven't fully figured out what it is yet.</p></div>
+        <div class="stand-detail-block"><h4>What to Work Towards</h4><p>The goal here is to take a step back, notice what needs to change, and be honest with yourself about it instead of brushing it off or pushing it aside.</p></div>
+        <div class="stand-detail-block"><h4>How to Move Through It</h4><p>A good place to start is by listening to the IAR Podcast, hearing how others have gone through it, and joining a peer group so you can get connected and not feel like you're figuring it out on your own.</p></div>
+      </div>
     </div>
-    <div class="stand-card fade-in fade-in-d1" onclick="togglePhase(2)" id="card-2">
-      <div class="stand-card-phase">Phase 02</div>
-      <div class="stand-card-number">02</div>
-      <div class="stand-card-title">Built by Pain</div>
-      <div class="stand-card-desc">Choosing to fight even when it's hard.</div>
+    <div class="stand-card-wrap fade-in fade-in-d1" id="wrap-2">
+      <div class="stand-card" onclick="togglePhase(2)" id="card-2">
+        <div class="stand-card-phase">Phase 02</div>
+        <div class="stand-card-number">02</div>
+        <div class="stand-card-title">Built by Pain</div>
+        <div class="stand-card-desc">Choosing to fight even when it's hard.</div>
+        <div class="stand-card-arrow" id="arrow-2">▾</div>
+      </div>
+      <div class="stand-detail" id="detail-2">
+        <div class="stand-detail-block"><h4>What This Looks Like</h4><p>Knowing what needs to change but still struggling to follow through, falling back into old habits, or avoiding the things you know you need to do because they're uncomfortable.</p></div>
+        <div class="stand-detail-block"><h4>What to Work Towards</h4><p>Choosing to show up even when it's hard, building structure into your day, and starting to hold yourself accountable for what you said you'd do.</p></div>
+        <div class="stand-detail-block"><h4>How to Move Through It</h4><p>Showing up to IAR runs, committing to the 60-day challenge, and being around people who are doing the work too.</p></div>
+      </div>
     </div>
-    <div class="stand-card fade-in fade-in-d2" onclick="togglePhase(3)" id="card-3">
-      <div class="stand-card-phase">Phase 03</div>
-      <div class="stand-card-number">03</div>
-      <div class="stand-card-title">Built Different</div>
-      <div class="stand-card-desc">You're no longer who you were. And it shows.</div>
+    <div class="stand-card-wrap fade-in fade-in-d2" id="wrap-3">
+      <div class="stand-card" onclick="togglePhase(3)" id="card-3">
+        <div class="stand-card-phase">Phase 03</div>
+        <div class="stand-card-number">03</div>
+        <div class="stand-card-title">Built Different</div>
+        <div class="stand-card-desc">You're no longer who you were. And it shows.</div>
+        <div class="stand-card-arrow" id="arrow-3">▾</div>
+      </div>
+      <div class="stand-detail" id="detail-3">
+        <div class="stand-detail-block"><h4>What This Looks Like</h4><p>Things start to feel different. You're showing up more consistently, your habits are changing, and the way you handle things isn't the same as it used to be.</p></div>
+        <div class="stand-detail-block"><h4>What to Work Towards</h4><p>It becomes about taking ownership, staying consistent even when no one is watching, and building an identity around how you show up every day.</p></div>
+        <div class="stand-detail-block"><h4>How to Move Through It</h4><p>This can mean continuing to show up to runs and community events, staying involved, and surrounding yourself with people who are living the same way.</p></div>
+      </div>
     </div>
-    <div class="stand-card fade-in fade-in-d3" onclick="togglePhase(4)" id="card-4">
-      <div class="stand-card-phase">Phase 04</div>
-      <div class="stand-card-number">04</div>
-      <div class="stand-card-title">Powered by Purpose</div>
-      <div class="stand-card-desc">The shift from "me" to "how can I help?"</div>
+    <div class="stand-card-wrap fade-in fade-in-d3" id="wrap-4">
+      <div class="stand-card" onclick="togglePhase(4)" id="card-4">
+        <div class="stand-card-phase">Phase 04</div>
+        <div class="stand-card-number">04</div>
+        <div class="stand-card-title">Powered by Purpose</div>
+        <div class="stand-card-desc">The shift from "me" to "how can I help?"</div>
+        <div class="stand-card-arrow" id="arrow-4">▾</div>
+      </div>
+      <div class="stand-detail" id="detail-4">
+        <div class="stand-detail-block"><h4>What This Looks Like</h4><p>The focus starts to shift beyond just you. You're still showing up for yourself, but you're also thinking about how you can support others and be part of something bigger.</p></div>
+        <div class="stand-detail-block"><h4>What to Work Towards</h4><p>It becomes about stepping up, taking initiative, and using what you've built to have an impact on the people around you.</p></div>
+        <div class="stand-detail-block"><h4>How to Move Through It</h4><p>This can mean helping at events, supporting new people as they come in, and being someone others can rely on.</p></div>
+      </div>
     </div>
-    <div class="stand-card fade-in fade-in-d4" onclick="togglePhase(5)" id="card-5">
-      <div class="stand-card-phase">Phase 05</div>
-      <div class="stand-card-number">05</div>
-      <div class="stand-card-title">We Are What Comes After</div>
-      <div class="stand-card-desc">You become someone others look to.</div>
-    </div>
-
-    <!-- Phase detail panels — always rendered below the full row of cards -->
-    <div class="stand-detail" id="detail-1">
-      <div class="stand-detail-block"><h4>What This Looks Like</h4><p>You may notice your mindset isn't where it should be, your routine is slipping, or you're not showing up the way you know you can. Something feels off, even if you haven't fully figured out what it is yet.</p></div>
-      <div class="stand-detail-block"><h4>What to Work Towards</h4><p>The goal here is to take a step back, notice what needs to change, and be honest with yourself about it instead of brushing it off or pushing it aside.</p></div>
-      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>A good place to start is by listening to the IAR Podcast, hearing how others have gone through it, and joining a peer group so you can get connected and not feel like you're figuring it out on your own.</p></div>
-    </div>
-    <div class="stand-detail" id="detail-2">
-      <div class="stand-detail-block"><h4>What This Looks Like</h4><p>Knowing what needs to change but still struggling to follow through, falling back into old habits, or avoiding the things you know you need to do because they're uncomfortable.</p></div>
-      <div class="stand-detail-block"><h4>What to Work Towards</h4><p>Choosing to show up even when it's hard, building structure into your day, and starting to hold yourself accountable for what you said you'd do.</p></div>
-      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>Showing up to IAR runs, committing to the 60-day challenge, and being around people who are doing the work too.</p></div>
-    </div>
-    <div class="stand-detail" id="detail-3">
-      <div class="stand-detail-block"><h4>What This Looks Like</h4><p>Things start to feel different. You're showing up more consistently, your habits are changing, and the way you handle things isn't the same as it used to be.</p></div>
-      <div class="stand-detail-block"><h4>What to Work Towards</h4><p>It becomes about taking ownership, staying consistent even when no one is watching, and building an identity around how you show up every day.</p></div>
-      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>This can mean continuing to show up to runs and community events, staying involved, and surrounding yourself with people who are living the same way.</p></div>
-    </div>
-    <div class="stand-detail" id="detail-4">
-      <div class="stand-detail-block"><h4>What This Looks Like</h4><p>The focus starts to shift beyond just you. You're still showing up for yourself, but you're also thinking about how you can support others and be part of something bigger.</p></div>
-      <div class="stand-detail-block"><h4>What to Work Towards</h4><p>It becomes about stepping up, taking initiative, and using what you've built to have an impact on the people around you.</p></div>
-      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>This can mean helping at events, supporting new people as they come in, and being someone others can rely on.</p></div>
-    </div>
-    <div class="stand-detail" id="detail-5">
-      <div class="stand-detail-block"><h4>What This Looks Like</h4><p>People start to notice it. The way you carry yourself, how you show up, and the consistency behind it. Others naturally look to you because you've put the work in and stayed with it.</p></div>
-      <div class="stand-detail-block"><h4>What to Work Towards</h4><p>It becomes about holding a standard, staying consistent long term, and being someone others can rely on within the community.</p></div>
-      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>This can mean representing IAR at events, speaking and sharing your story, or stepping into roles where you're helping lead and support the community.</p></div>
+    <div class="stand-card-wrap fade-in fade-in-d4" id="wrap-5">
+      <div class="stand-card" onclick="togglePhase(5)" id="card-5">
+        <div class="stand-card-phase">Phase 05</div>
+        <div class="stand-card-number">05</div>
+        <div class="stand-card-title">We Are What Comes After</div>
+        <div class="stand-card-desc">You become someone others look to.</div>
+        <div class="stand-card-arrow" id="arrow-5">▾</div>
+      </div>
+      <div class="stand-detail" id="detail-5">
+        <div class="stand-detail-block"><h4>What This Looks Like</h4><p>People start to notice it. The way you carry yourself, how you show up, and the consistency behind it. Others naturally look to you because you've put the work in and stayed with it.</p></div>
+        <div class="stand-detail-block"><h4>What to Work Towards</h4><p>It becomes about holding a standard, staying consistent long term, and being someone others can rely on within the community.</p></div>
+        <div class="stand-detail-block"><h4>How to Move Through It</h4><p>This can mean representing IAR at events, speaking and sharing your story, or stepping into roles where you're helping lead and support the community.</p></div>
+      </div>
     </div>
   </div>
 </div>
-
-<!-- CTA BANNER -->
 <div class="quote-banner">
   <p class="quote-text">Not sure where you are? Start with a run. Everything else follows.</p>
   <p class="quote-attr"><a href="get-started.html" style="color:var(--gold-dark);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:0.15em;text-transform:uppercase;">Find a Community Event →</a></p>

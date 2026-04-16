@@ -42,48 +42,38 @@ function subscribeEmail() {
 // ── PHASES ──
 let activePhase = null;
 function togglePhase(num) {
-  const details = document.querySelectorAll('.stand-detail');
-  const cards = document.querySelectorAll('.stand-card');
-  details.forEach(d => d.classList.remove('active'));
-  cards.forEach(c => c.classList.remove('active'));
+  // Close all
+  document.querySelectorAll('.stand-detail').forEach(d => d.classList.remove('active'));
+  document.querySelectorAll('.stand-card').forEach(c => c.classList.remove('active'));
+
   if (activePhase === num) {
     activePhase = null;
-    // Deselect phase map node and reset progress
     document.querySelectorAll('.phase-node').forEach(n => n.classList.remove('active'));
     const progress = document.getElementById('phase-progress');
     if (progress) progress.style.width = '0%';
     return;
   }
   activePhase = num;
-  // Sync phase map node and progress bar
+
+  // Sync phase map
   document.querySelectorAll('.phase-node').forEach(n => n.classList.remove('active'));
   const node = document.querySelector('.phase-node[data-phase="' + num + '"]');
   if (node) node.classList.add('active');
   const progress = document.getElementById('phase-progress');
   if (progress) progress.style.width = ((num - 1) / 4 * 100) + '%';
-  const target = document.getElementById('detail-' + num);
+
+  // Open the clicked card's detail (detail is sibling inside the wrap)
   const card = document.getElementById('card-' + num);
+  const detail = document.getElementById('detail-' + num);
   if (card) card.classList.add('active');
-  if (target && card) {
-    card.parentNode.insertBefore(target, card.nextSibling);
-    // Calculate arrow position relative to detail panel
-    const cardRect = card.getBoundingClientRect();
-    const gridRect = card.parentNode.getBoundingClientRect();
-    const arrowLeft = (cardRect.left - gridRect.left) + (cardRect.width / 2) - 10;
-    const arrowPct = Math.max(2, Math.min(95, (arrowLeft / gridRect.width) * 100));
-    target.style.setProperty('--detail-arrow-left', arrowPct + '%');
-    target.classList.add('active');
-    setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 30);
+  if (detail) {
+    detail.classList.add('active');
+    setTimeout(() => detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 30);
   }
 }
 
 // ── PHASE MAP ──
 function selectPhaseNode(num) {
-  document.querySelectorAll('.phase-node').forEach(n => n.classList.remove('active'));
-  const node = document.querySelector(`.phase-node[data-phase="${num}"]`);
-  if (node) node.classList.add('active');
-  const progress = document.getElementById('phase-progress');
-  if (progress) progress.style.width = ((num - 1) / 4 * 100) + '%';
   togglePhase(num);
   const standSection = document.getElementById('phases');
   if (standSection) setTimeout(() => standSection.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
