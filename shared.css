@@ -330,7 +330,7 @@ footer {
   cursor: pointer; transition: background 0.25s; position: relative;
   min-height: 260px; display: flex; flex-direction: column;
 }
-.stand-card-wrap:last-child .stand-card { border-right: none; }
+.stand-card:last-of-type { border-right: none; }
 .stand-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
 .stand-card:hover { background: var(--mid-gray); }
 .stand-card:hover::before, .stand-card.active::before { transform: scaleX(1); }
@@ -341,11 +341,12 @@ footer {
 .stand-card-number { font-family: 'Bebas Neue', sans-serif; font-size: 52px; line-height: 0.9; color: rgba(253,191,18,0.08); margin-bottom: 0.6rem; }
 .stand-card-title { font-family: 'Bebas Neue', sans-serif; font-size: 23px; letter-spacing: 0.05em; color: var(--white); margin-bottom: 0.85rem; }
 .stand-card-desc { font-size: 13.5px; font-weight: 300; color: #b8b8b8; line-height: 1.65; }
-.stand-detail { display: none; background: var(--mid-gray); padding: 1.8rem 1.5rem; border-top: 2px solid var(--gold); animation: slideDown 0.3s ease; }
-.stand-detail.active { display: flex; flex-direction: column; gap: 1.2rem; }
+.stand-detail { display: none; grid-column: 1 / -1; background: var(--mid-gray); padding: 3rem 2.5rem; border-top: 2px solid var(--gold); animation: slideDown 0.3s ease; }
+.stand-detail.active { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.5rem; }
+#detail-content { display: contents; }
 @keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
-.stand-detail-block h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
-.stand-detail-block p { font-size: 13px; color: var(--lighter-gray); line-height: 1.75; }
+.stand-detail-block h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+.stand-detail-block p { font-size: 14.5px; color: var(--lighter-gray); line-height: 1.8; }
 .stand-detail-link { color: var(--gold); font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 1.1rem; transition: gap 0.2s; }
 .stand-detail-link:hover { gap: 10px; }
 

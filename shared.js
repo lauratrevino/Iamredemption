@@ -40,20 +40,55 @@ function subscribeEmail() {
 }
 
 // ── PHASES ──
+const phaseContent = {
+  1: `<div class="stand-detail-block"><h4>What This Looks Like</h4><p>You may notice your mindset isn't where it should be, your routine is slipping, or you're not showing up the way you know you can. Something feels off, even if you haven't fully figured out what it is yet.</p></div>
+      <div class="stand-detail-block"><h4>What to Work Towards</h4><p>The goal here is to take a step back, notice what needs to change, and be honest with yourself about it instead of brushing it off or pushing it aside.</p></div>
+      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>A good place to start is by listening to the IAR Podcast, hearing how others have gone through it, and joining a peer group so you can get connected and not feel like you're figuring it out on your own.</p></div>`,
+  2: `<div class="stand-detail-block"><h4>What This Looks Like</h4><p>Knowing what needs to change but still struggling to follow through, falling back into old habits, or avoiding the things you know you need to do because they're uncomfortable.</p></div>
+      <div class="stand-detail-block"><h4>What to Work Towards</h4><p>Choosing to show up even when it's hard, building structure into your day, and starting to hold yourself accountable for what you said you'd do.</p></div>
+      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>Showing up to IAR runs, committing to the 60-day challenge, and being around people who are doing the work too.</p></div>`,
+  3: `<div class="stand-detail-block"><h4>What This Looks Like</h4><p>Things start to feel different. You're showing up more consistently, your habits are changing, and the way you handle things isn't the same as it used to be.</p></div>
+      <div class="stand-detail-block"><h4>What to Work Towards</h4><p>It becomes about taking ownership, staying consistent even when no one is watching, and building an identity around how you show up every day.</p></div>
+      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>This can mean continuing to show up to runs and community events, staying involved, and surrounding yourself with people who are living the same way.</p></div>`,
+  4: `<div class="stand-detail-block"><h4>What This Looks Like</h4><p>The focus starts to shift beyond just you. You're still showing up for yourself, but you're also thinking about how you can support others and be part of something bigger.</p></div>
+      <div class="stand-detail-block"><h4>What to Work Towards</h4><p>It becomes about stepping up, taking initiative, and using what you've built to have an impact on the people around you.</p></div>
+      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>This can mean helping at events, supporting new people as they come in, and being someone others can rely on.</p></div>`,
+  5: `<div class="stand-detail-block"><h4>What This Looks Like</h4><p>People start to notice it. The way you carry yourself, how you show up, and the consistency behind it. Others naturally look to you because you've put the work in and stayed with it.</p></div>
+      <div class="stand-detail-block"><h4>What to Work Towards</h4><p>It becomes about holding a standard, staying consistent long term, and being someone others can rely on within the community.</p></div>
+      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>This can mean representing IAR at events, speaking and sharing your story, or stepping into roles where you're helping lead and support the community.</p></div>`
+};
+
 let activePhase = null;
 function togglePhase(num) {
-  // Close all
-  document.querySelectorAll('.stand-detail').forEach(d => d.classList.remove('active'));
+  const panel = document.getElementById('stand-detail-panel');
+  const detailContent = document.getElementById('detail-content');
+
+  // Deactivate all cards
   document.querySelectorAll('.stand-card').forEach(c => c.classList.remove('active'));
 
+  // Toggle off if same card clicked again
   if (activePhase === num) {
     activePhase = null;
+    panel.classList.remove('active');
     document.querySelectorAll('.phase-node').forEach(n => n.classList.remove('active'));
     const progress = document.getElementById('phase-progress');
     if (progress) progress.style.width = '0%';
     return;
   }
+
   activePhase = num;
+
+  // Activate clicked card
+  const card = document.getElementById('card-' + num);
+  if (card) card.classList.add('active');
+
+  // Swap content into the single panel
+  detailContent.innerHTML = phaseContent[num];
+
+  // Show the panel
+  panel.classList.remove('active');
+  void panel.offsetWidth; // force reflow for animation replay
+  panel.classList.add('active');
 
   // Sync phase map
   document.querySelectorAll('.phase-node').forEach(n => n.classList.remove('active'));
@@ -62,14 +97,8 @@ function togglePhase(num) {
   const progress = document.getElementById('phase-progress');
   if (progress) progress.style.width = ((num - 1) / 4 * 100) + '%';
 
-  // Open the clicked card's detail (detail is sibling inside the wrap)
-  const card = document.getElementById('card-' + num);
-  const detail = document.getElementById('detail-' + num);
-  if (card) card.classList.add('active');
-  if (detail) {
-    detail.classList.add('active');
-    setTimeout(() => detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 30);
-  }
+  // Smooth scroll to panel
+  setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 30);
 }
 
 // ── PHASE MAP ──
