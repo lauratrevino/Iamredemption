@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
   <style>
-    footer { background: #122208 !important; }
+    footer { background: #000000 !important; }
     .footer-col ul a { color: #c0c0c0 !important; font-size: 14px !important; }
     .footer-col ul a:hover { color: var(--gold) !important; }
     .footer-brand p { color: #b0b0b0 !important; font-size: 14px !important; }
@@ -71,7 +71,7 @@
 
 <!-- PAGE HERO -->
 <div class="page-hero">
-  <div class="page-hero-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/a8337b04-69d4-4ddd-85ae-4023f42040be/454457859_1181241769877982_4024960473457995510_n.jpg');"></div>
+  <div class="page-hero-bg" style="background-image:url('hero1.png');"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
     <div class="page-hero-eyebrow fade-in">Find Your Place</div>
@@ -227,7 +227,7 @@
 .stand-grid {
   display: grid !important;
   grid-template-columns: repeat(5, 1fr) !important;
-  align-items: start !important;
+  align-items: stretch !important;
   gap: 0 !important;
 }
 .stand-card {
@@ -235,6 +235,7 @@
   height: auto !important;
   display: flex !important;
   flex-direction: column !important;
+  align-self: stretch !important;
 }
 .stand-card-desc { flex: 1 !important; }
 .stand-detail {

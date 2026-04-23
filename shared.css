@@ -87,7 +87,7 @@ nav#top-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1rem 2.5rem;
-  background: rgba(18,34,8,0.98); backdrop-filter: blur(14px);
+  background: rgba(0,0,0,0.98); backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(253,191,18,0.18);
   transition: padding 0.3s;
 }
@@ -249,7 +249,7 @@ nav#top-nav {
 
 /* ── FOOTER ── */
 footer {
-  background: #122208; padding: 2.2rem 2.5rem 1.2rem;
+  background: #000000; padding: 2.2rem 2.5rem 1.2rem;
   border-top: 2px solid rgba(253,191,18,0.3);
 }
 .footer-grid {

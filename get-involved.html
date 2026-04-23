@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
   <style>
-    footer { background: #122208 !important; }
+    footer { background: #000000 !important; }
     .footer-col ul a { color: #c0c0c0 !important; font-size: 14px !important; }
     .footer-col ul a:hover { color: var(--gold) !important; }
     .footer-brand p { color: #b0b0b0 !important; font-size: 14px !important; }
@@ -69,7 +69,7 @@
 
 <!-- PAGE HERO -->
 <div class="page-hero">
-  <div class="page-hero-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/8825b60f-6102-4d1c-92f3-aa01d15e81c4/534541994_17941510155028615_2774412757570962117_n.jpg');"></div>
+  <div class="page-hero-bg" style="background-image:url('hero3.png');"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
     <div class="page-hero-eyebrow fade-in">Get Involved</div>
@@ -80,7 +80,7 @@
 
 <!-- VOLUNTEER SECTION -->
 <section class="content-section alt" id="volunteer" style="padding:5.5rem 2.5rem;">
-  <div style="max-width:1100px;margin:0 auto;">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="volunteer-grid">
     <div class="fade-in">
       <div class="section-label">Volunteer</div>
       <h2 class="section-title">Give your time.<br>Change a life.</h2>
@@ -102,6 +102,10 @@
       <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
       <script>window.jotformEmbedHandler("iframe[id='260924104080043']", "https://form.jotform.com/")</script>
       <a class="btn lightbox-260924104080043" style="margin-top:16px;text-transform:uppercase;font-size:14px;text-decoration:none;cursor:pointer;display:inline-block;padding:10px 20px;font-family:inherit;text-shadow:none;user-select:none;transition:all .1s ease-in;background-color:#fdbf12;border:1px solid #fdbf12;color:#000000;font-weight:700;letter-spacing:0.1em;">Volunteer With Us</a>
+    </div>
+    <div class="fade-in fade-in-d1" style="position:relative;">
+      <img src="volunteer1.png" alt="IAR Volunteers" style="width:100%;display:block;border-top:3px solid var(--gold);">
+      <img src="volunteer2.png" alt="IAR Community Volunteers" style="width:75%;display:block;border-top:3px solid var(--gold);margin-top:-2rem;margin-left:auto;box-shadow:8px 8px 0 rgba(253,191,18,0.2);">
     </div>
   </div>
 </section>
@@ -235,15 +239,30 @@
 <script>
 function submitStory() {
   const btn = event.currentTarget;
+  const form = btn.closest('.story-form');
+  const name = form ? (form.querySelector('input[type="text"]') || {}).value || 'Anonymous' : 'Anonymous';
+  const email = form ? (form.querySelector('input[type="email"]') || {}).value || '' : '';
+  const story = form ? (form.querySelector('textarea') || {}).value || '' : '';
+  const subject = encodeURIComponent('IAR Story Submission from ' + name);
+  const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + story);
+  window.location.href = 'mailto:jasmine@iamredemption.org?subject=' + subject + '&body=' + body;
   btn.textContent = "Story Submitted. Thank You.";
   btn.style.background = '#3b6d11';
   setTimeout(() => { btn.textContent = "Submit My Story"; btn.style.background = ''; }, 4000);
 }
 function submitContact() {
   const btn = event.currentTarget;
+  const form = btn.closest('.story-form');
+  const topic = form ? (form.querySelector('select') || {}).value || 'General Question' : 'General Question';
+  const name = form ? (form.querySelectorAll('input[type="text"]')[0] || {}).value || '' : '';
+  const email = form ? (form.querySelector('input[type="email"]') || {}).value || '' : '';
+  const message = form ? (form.querySelector('textarea') || {}).value || '' : '';
+  const subject = encodeURIComponent('IAR Contact: ' + topic + (name ? ' from ' + name : ''));
+  const body = encodeURIComponent('Topic: ' + topic + '\nName: ' + name + '\nEmail: ' + email + '\n\n' + message);
+  window.location.href = 'mailto:jasmine@iamredemption.org?subject=' + subject + '&body=' + body;
   btn.textContent = "Message Sent. Thank You.";
   btn.style.background = '#3b6d11';
-  setTimeout(() => { btn.textContent = "Send Message"; btn.style.background = ''; }, 4000);
+  setTimeout(() => { btn.textContent = "SEND MESSAGE"; btn.style.background = ''; }, 4000);
 }
 // Auto-select "Booking Shawn" when arriving via Book Shawn button
 window.addEventListener('DOMContentLoaded', function() {
