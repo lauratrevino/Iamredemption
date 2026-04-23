@@ -119,10 +119,10 @@ nav#top-nav {
   min-height: 48vh; display: flex; align-items: flex-end;
   overflow: hidden;
 }
-.page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center top; filter: brightness(0.6); }
+.page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center top; filter: brightness(0.82); }
 .page-hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to top, #0f0f0f 0%, rgba(10,10,10,0.15) 50%, transparent 100%);
+  background: linear-gradient(to top, rgba(15,15,15,0.7) 0%, rgba(10,10,10,0.08) 50%, transparent 100%);
 }
 .page-hero-content { position: relative; max-width: 780px; }
 .page-hero-eyebrow {
@@ -146,11 +146,11 @@ nav#top-nav {
 .hero-bg {
   position: absolute; inset: 0;
   background-image: url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/a8337b04-69d4-4ddd-85ae-4023f42040be/454457859_1181241769877982_4024960473457995510_n.jpg');
-  background-size: cover; background-position: center top; filter: brightness(0.78);
+  background-size: cover; background-position: center top; filter: brightness(0.92);
 }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(160deg, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.45) 50%, rgba(10,10,10,0.82) 100%);
+  background: linear-gradient(160deg, rgba(10,10,10,0.0) 0%, rgba(10,10,10,0.25) 50%, rgba(10,10,10,0.60) 100%);
 }
 .hero-content { position: relative; max-width: none; }
 .hero-eyebrow {
