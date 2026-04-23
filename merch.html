@@ -52,38 +52,47 @@
   </div>
 </section>
 
-<!-- MERCH GRID — removed duplicate header and subheader -->
+<!-- MERCH GRID -->
 <section class="content-section mid" id="merch">
   <div class="section-label fade-in">Shop</div>
-  <div class="merch-grid" style="grid-template-columns:repeat(3,1fr);">
-    <div class="merch-card fade-in">
-      <div class="merch-img-box" style="position:relative;aspect-ratio:1;overflow:hidden;padding:0;">
-        <img src="Merch_Tile_1.png" alt="Goat Logo Hat" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;">
+
+    <!-- Tile 1: Goat Logo Hat -->
+    <div style="background:var(--card-bg);border:1px solid rgba(253,191,18,0.1);overflow:hidden;transition:border-color 0.25s,transform 0.25s;" onmouseover="this.style.borderColor='rgba(253,191,18,0.45)';this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='rgba(253,191,18,0.1)';this.style.transform='translateY(0)';">
+      <div style="position:relative;width:100%;padding-bottom:100%;overflow:hidden;background:#111;">
+        <img src="Merch_Tile_1.png" alt="Goat Logo Hat" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
       </div>
-      <div class="merch-info">
-        <div class="merch-name">Goat Logo Hat</div>
-        <div class="merch-price">$40</div>
-      </div>
-    </div>
-    <div class="merch-card fade-in fade-in-d1">
-      <div class="merch-img-box" style="position:relative;aspect-ratio:1;overflow:hidden;padding:0;">
-        <img src="Merch_Tile_2_.png" alt="Built Different Tee" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-      <div class="merch-info">
-        <div class="merch-name">Built Different Tee</div>
-        <div class="merch-price">$35</div>
+      <div style="padding:1.25rem 1.5rem 1.5rem;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.06em;color:var(--white);">Goat Logo Hat</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--gold);margin-top:0.25rem;">$40</div>
       </div>
     </div>
-    <div class="merch-card fade-in fade-in-d2">
-      <div class="merch-img-box" style="position:relative;aspect-ratio:1;overflow:hidden;padding:0;">
-        <img src="Merch_Tile_3_.png" alt="Camo Tee" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+
+    <!-- Tile 2: Built Different Tee -->
+    <div style="background:var(--card-bg);border:1px solid rgba(253,191,18,0.1);overflow:hidden;transition:border-color 0.25s,transform 0.25s;" onmouseover="this.style.borderColor='rgba(253,191,18,0.45)';this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='rgba(253,191,18,0.1)';this.style.transform='translateY(0)';">
+      <div style="position:relative;width:100%;padding-bottom:100%;overflow:hidden;background:#111;">
+        <img src="Merch_Tile_2_.png" alt="Built Different Tee" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
       </div>
-      <div class="merch-info">
-        <div class="merch-name">Camo Tee</div>
-        <div class="merch-price">$40</div>
+      <div style="padding:1.25rem 1.5rem 1.5rem;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.06em;color:var(--white);">Built Different Tee</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--gold);margin-top:0.25rem;">$35</div>
       </div>
     </div>
+
+    <!-- Tile 3: Camo Tee -->
+    <div style="background:var(--card-bg);border:1px solid rgba(253,191,18,0.1);overflow:hidden;transition:border-color 0.25s,transform 0.25s;" onmouseover="this.style.borderColor='rgba(253,191,18,0.45)';this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='rgba(253,191,18,0.1)';this.style.transform='translateY(0)';">
+      <div style="position:relative;width:100%;padding-bottom:100%;overflow:hidden;background:#111;">
+        <img src="Merch_Tile_3_.png" alt="Camo Tee" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div style="padding:1.25rem 1.5rem 1.5rem;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.06em;color:var(--white);">Camo Tee</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--gold);margin-top:0.25rem;">$40</div>
+      </div>
+    </div>
+
   </div>
+
+  <!-- Single SHOP NOW CTA -->
   <div style="text-align:center;margin-top:3rem;">
     <a href="https://iamredemption.square.site/#items" target="_blank" style="
       display:inline-block;
@@ -96,8 +105,8 @@
       text-transform:uppercase;
       text-decoration:none;
       padding:1.1rem 3.5rem;
-      transition:background 0.2s, transform 0.15s, box-shadow 0.2s;
       box-shadow:0 4px 20px rgba(253,191,18,0.25);
+      transition:background 0.2s,transform 0.15s,box-shadow 0.2s;
     "
     onmouseover="this.style.background='#ffe053';this.style.transform='scale(1.025)';this.style.boxShadow='0 6px 32px rgba(253,191,18,0.45)';"
     onmouseout="this.style.background='#FDBF12';this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(253,191,18,0.25)';">

@@ -116,10 +116,10 @@ nav#top-nav {
 /* ── PAGE HERO (inner pages) ── */
 .page-hero {
   position: relative; padding: 8rem 2.5rem 2.5rem;
-  min-height: 38vh; display: flex; align-items: flex-end;
+  min-height: 48vh; display: flex; align-items: flex-end;
   overflow: hidden;
 }
-.page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: brightness(0.6); }
+.page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center top; filter: brightness(0.6); }
 .page-hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to top, #0f0f0f 0%, rgba(10,10,10,0.15) 50%, transparent 100%);
