@@ -115,11 +115,11 @@ nav#top-nav {
 
 /* ── PAGE HERO (inner pages) ── */
 .page-hero {
-  position: relative; padding: 10rem 2.5rem 2.5rem;
-  min-height: 48vh; display: flex; align-items: flex-end;
+  position: relative; padding: 86px 2.5rem 2.5rem;
+  min-height: 55vh; display: flex; align-items: flex-end;
   overflow: hidden;
 }
-.page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center top; filter: brightness(0.5); }
+.page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center center; filter: brightness(0.6); top: 0; }
 .page-hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(15,15,15,0.7) 0%, rgba(10,10,10,0.08) 50%, transparent 100%);
@@ -141,11 +141,12 @@ nav#top-nav {
 .hero {
   position: relative; min-height: 75vh;
   display: flex; flex-direction: column; justify-content: flex-start;
-  padding: 160px 2.5rem 3rem; overflow: hidden;
+  padding: 86px 2.5rem 3rem; overflow: hidden;
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-size: cover; background-position: center top; filter: brightness(0.5);
+  background-size: cover; background-position: center center; filter: brightness(0.6);
+  top: 0;
 }
 .hero-overlay {
   position: absolute; inset: 0;
@@ -460,8 +461,8 @@ textarea.form-field { resize: vertical; }
   .email-input { width: 100%; }
   .img-stack { height: 280px; }
   .content-section { padding: 3rem 1.25rem; }
-  .hero { padding: 100px 1.25rem 2rem; min-height: 65vh; }
-  .page-hero { padding: 8rem 1.25rem 2rem; }
+  .hero { padding: 80px 1.25rem 2rem; min-height: 65vh; }
+  .page-hero { padding: 80px 1.25rem 2rem; }
   .form-row { grid-template-columns: 1fr; }
   .episode-grid { grid-template-columns: 1fr 1fr; }
   .hero h1 { font-size: clamp(38px, 9vw, 64px); white-space: normal; }
@@ -484,8 +485,8 @@ textarea.form-field { resize: vertical; }
   .platform-links { flex-wrap: wrap; gap: 0.5rem; }
   .platform-link { font-size: 12px; padding: 0.4rem 0.8rem; }
   .content-section { padding: 2.5rem 1rem; }
-  .hero { padding: 95px 1rem 2rem; }
-  .page-hero { padding: 7.5rem 1rem 2rem; }
+  .hero { padding: 80px 1rem 2rem; }
+  .page-hero { padding: 80px 1rem 2rem; }
   .email-bar { padding: 2.5rem 1rem; }
   .email-bar-inner { gap: 1.25rem; }
   .email-input, .email-btn { width: 100%; }
