@@ -120,7 +120,7 @@ nav#top-nav {
   overflow: hidden;
   margin-top: 86px;
 }
-.page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center center; filter: brightness(0.6); top: 0; }
+.page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: top center; filter: brightness(0.6); }
 .page-hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(15,15,15,0.7) 0%, rgba(10,10,10,0.08) 50%, transparent 100%);
@@ -147,8 +147,7 @@ nav#top-nav {
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-size: cover; background-position: center center; filter: brightness(0.6);
-  top: 0;
+  background-size: cover; background-position: top center; filter: brightness(0.6);
 }
 .hero-overlay {
   position: absolute; inset: 0;
