@@ -145,7 +145,6 @@ nav#top-nav {
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url('https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/a8337b04-69d4-4ddd-85ae-4023f42040be/454457859_1181241769877982_4024960473457995510_n.jpg');
   background-size: cover; background-position: center top; filter: brightness(0.92);
 }
 .hero-overlay {
