@@ -70,7 +70,7 @@
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-bg" style="background-image:url('hero3.png');"></div>
-  <div class="page-hero-overlay"></div>
+  <div class="page-hero-overlay" style="opacity:0.5;"></div>
   <div class="page-hero-content">
     <div class="page-hero-eyebrow fade-in">Get Involved</div>
     <h1 class="page-hero-title fade-in fade-in-d1">Be Part of the <em>Build.</em></h1>
@@ -104,7 +104,7 @@
       <a class="btn lightbox-260924104080043" style="margin-top:16px;text-transform:uppercase;font-size:14px;text-decoration:none;cursor:pointer;display:inline-block;padding:10px 20px;font-family:inherit;text-shadow:none;user-select:none;transition:all .1s ease-in;background-color:#fdbf12;border:1px solid #fdbf12;color:#000000;font-weight:700;letter-spacing:0.1em;">Volunteer With Us</a>
     </div>
     <div class="fade-in fade-in-d1" style="position:relative;">
-      <img src="volunteer1.png" alt="IAR Volunteers" style="width:100%;display:block;border-top:3px solid var(--gold);">
+      <img src="volunteer1.png" alt="IAR Volunteers" style="width:75%;display:block;border-top:3px solid var(--gold);margin-left:auto;">
       <img src="volunteer2.png" alt="IAR Community Volunteers" style="width:75%;display:block;border-top:3px solid var(--gold);margin-top:-2rem;margin-left:auto;box-shadow:8px 8px 0 rgba(253,191,18,0.2);">
     </div>
   </div>
@@ -144,7 +144,7 @@
     <div class="fade-in">
       <div class="section-label">EVERYTHING ELSE</div>
       <h2 class="section-title">Contact Us</h2>
-      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:2.5rem;">For partnerships, general questions, or booking Shawn — send us a message.</p>
+      <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:2.5rem;">For partnerships, general questions, or booking Shawn, send us a message.</p>
       <div class="story-form" id="contact-form">
         <div class="form-group">
           <label class="form-label">I'M CONTACTING ABOUT</label>
@@ -163,8 +163,8 @@
     </div>
     <div class="fade-in fade-in-d1" style="padding-top:3rem;">
       <div class="impact-aside">
-        <div class="impact-block"><div class="impact-block-title">BUILT ON REAL IMPACT</div><div class="impact-block-text">We build with people who care about recovery and community. If that's you, let's talk.</div></div>
-        <div class="impact-block"><div class="impact-block-title">STAND FOR SOMETHING REAL</div><div class="impact-block-text">If you want your community to know you support recovery and accountability, we're here for it.</div></div>
+        <div class="impact-block"><div class="impact-block-title">BUILT ON REAL IMPACT</div><div class="impact-block-text">We focus on work that actually changes lives. Everything we do is grounded in real experiences, real people, and real outcomes.</div></div>
+        <div class="impact-block"><div class="impact-block-title">STAND FOR SOMETHING REAL</div><div class="impact-block-text">Align your brand with something that matters. Support recovery, accountability, and a community that shows up and does the work.</div></div>
         <div class="impact-block"><div class="impact-block-title">INVITE SHAWN TO SPEAK</div><div class="impact-block-text">Shawn brings lived experience, honesty, and perspective that connects with people in a real way.</div></div>
       </div>
     </div>
@@ -217,7 +217,7 @@
       <ul>
         <li><a href="get-involved.html#story">Submit Your Story</a></li>
         <li><a href="get-involved.html#contact-form">Book Shawn</a></li>
-        <li><a href="get-involved.html#contact">Contact</a></li>
+        <li><a href="get-involved.html#partner">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -240,29 +240,71 @@
 function submitStory() {
   const btn = event.currentTarget;
   const form = btn.closest('.story-form');
-  const name = form ? (form.querySelector('input[type="text"]') || {}).value || 'Anonymous' : 'Anonymous';
-  const email = form ? (form.querySelector('input[type="email"]') || {}).value || '' : '';
-  const story = form ? (form.querySelector('textarea') || {}).value || '' : '';
-  const subject = encodeURIComponent('IAR Story Submission from ' + name);
-  const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + story);
-  window.location.href = 'mailto:jasmine@iamredemption.org?subject=' + subject + '&body=' + body;
-  btn.textContent = "Story Submitted. Thank You.";
-  btn.style.background = '#3b6d11';
-  setTimeout(() => { btn.textContent = "Submit My Story"; btn.style.background = ''; }, 4000);
+  const name = form ? (form.querySelector('input[type="text"]') || {}).value.trim() || 'Anonymous' : 'Anonymous';
+  const email = form ? (form.querySelector('input[type="email"]') || {}).value.trim() || '' : '';
+  const story = form ? (form.querySelector('textarea') || {}).value.trim() || '' : '';
+  if (!story) { alert('Please share your story before submitting.'); return; }
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  fetch('/api/submit-form', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ formType: 'story', name, email, story })
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.success) {
+      btn.textContent = 'Story Submitted. Thank You.';
+      btn.style.background = '#3b6d11';
+      if (form) { form.querySelectorAll('input, textarea').forEach(el => el.value = ''); }
+    } else {
+      btn.textContent = 'Submission Failed. Try Again.';
+      btn.style.background = '#8b1a1a';
+    }
+    btn.disabled = false;
+    setTimeout(() => { btn.textContent = 'Submit My Story'; btn.style.background = ''; }, 5000);
+  })
+  .catch(() => {
+    btn.textContent = 'Submission Failed. Try Again.';
+    btn.style.background = '#8b1a1a';
+    btn.disabled = false;
+    setTimeout(() => { btn.textContent = 'Submit My Story'; btn.style.background = ''; }, 5000);
+  });
 }
 function submitContact() {
   const btn = event.currentTarget;
   const form = btn.closest('.story-form');
   const topic = form ? (form.querySelector('select') || {}).value || 'General Question' : 'General Question';
-  const name = form ? (form.querySelectorAll('input[type="text"]')[0] || {}).value || '' : '';
-  const email = form ? (form.querySelector('input[type="email"]') || {}).value || '' : '';
-  const message = form ? (form.querySelector('textarea') || {}).value || '' : '';
-  const subject = encodeURIComponent('IAR Contact: ' + topic + (name ? ' from ' + name : ''));
-  const body = encodeURIComponent('Topic: ' + topic + '\nName: ' + name + '\nEmail: ' + email + '\n\n' + message);
-  window.location.href = 'mailto:jasmine@iamredemption.org?subject=' + subject + '&body=' + body;
-  btn.textContent = "Message Sent. Thank You.";
-  btn.style.background = '#3b6d11';
-  setTimeout(() => { btn.textContent = "SEND MESSAGE"; btn.style.background = ''; }, 4000);
+  const name = form ? (form.querySelectorAll('input[type="text"]')[0] || {}).value.trim() || '' : '';
+  const email = form ? (form.querySelector('input[type="email"]') || {}).value.trim() || '' : '';
+  const message = form ? (form.querySelector('textarea') || {}).value.trim() || '' : '';
+  if (!message) { alert('Please enter a message before sending.'); return; }
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  fetch('/api/submit-form', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ formType: 'contact', topic, name, email, message })
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.success) {
+      btn.textContent = 'Message Sent. Thank You.';
+      btn.style.background = '#3b6d11';
+      if (form) { form.querySelectorAll('input, select, textarea').forEach(el => { if (el.tagName === 'SELECT') el.selectedIndex = 0; else el.value = ''; }); }
+    } else {
+      btn.textContent = 'Send Failed. Try Again.';
+      btn.style.background = '#8b1a1a';
+    }
+    btn.disabled = false;
+    setTimeout(() => { btn.textContent = 'SEND MESSAGE'; btn.style.background = ''; }, 5000);
+  })
+  .catch(() => {
+    btn.textContent = 'Send Failed. Try Again.';
+    btn.style.background = '#8b1a1a';
+    btn.disabled = false;
+    setTimeout(() => { btn.textContent = 'SEND MESSAGE'; btn.style.background = ''; }, 5000);
+  });
 }
 // Auto-select "Booking Shawn" when arriving via Book Shawn button
 window.addEventListener('DOMContentLoaded', function() {

@@ -72,7 +72,7 @@
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-bg" style="background-image:url('hero1.png');"></div>
-  <div class="page-hero-overlay"></div>
+  <div class="page-hero-overlay" style="opacity:0.5;"></div>
   <div class="page-hero-content">
     <div class="page-hero-eyebrow fade-in">Find Your Place</div>
     <h1 class="page-hero-title fade-in fade-in-d1">Where You <em>Stand.</em></h1>
@@ -151,6 +151,102 @@
     <div class="stand-detail" id="stand-detail-panel">
       <div id="detail-content"></div>
     </div>
+
+    <!-- Phase detail data (hidden, used by JS) -->
+    <script>
+    const PHASE_DATA = {
+      1: {
+        title: 'Wake-Up',
+        phase: 'Phase 01',
+        blocks: [
+          {
+            heading: 'What It Feels Like',
+            body: 'Something breaks through. Maybe it's a rock bottom, a health scare, a relationship that can't take any more. Or maybe it's just a quiet moment where the weight becomes undeniable. This is the first crack of light.'
+          },
+          {
+            heading: 'How To Move Through It',
+            body: 'Name what's actually happening. Say it out loud or write it down. You don't need to have a plan. You just need to stop pretending everything is fine.'
+          },
+          {
+            heading: 'What IAR Offers Here',
+            body: 'A space to show up without having it figured out. Our runs, events, and community are designed for people who are at the beginning, not the end.'
+          }
+        ]
+      },
+      2: {
+        title: 'Built by Pain',
+        phase: 'Phase 02',
+        blocks: [
+          {
+            heading: 'What It Feels Like',
+            body: 'You're doing the work but it's hard. Progress is slow. Some days feel like backslides. The discomfort is real, and there's no shortcut through it.'
+          },
+          {
+            heading: 'How To Move Through It',
+            body: 'Showing up to community runs, doing something active even when you don't feel like it, and being around people who are doing the work too.'
+          },
+          {
+            heading: 'What IAR Offers Here',
+            body: 'Structure that doesn't require perfection. Runs, challenges, and community events built around showing up consistently — not showing up perfectly.'
+          }
+        ]
+      },
+      3: {
+        title: 'Built Different',
+        phase: 'Phase 03',
+        blocks: [
+          {
+            heading: 'What It Feels Like',
+            body: 'You're not who you were. The old patterns have less power. You're building something real — a routine, a mindset, a circle of people who get it.'
+          },
+          {
+            heading: 'How To Move Through It',
+            body: 'Keep showing up to community events, stay involved, and surround yourself with people who are living the same way and will hold you to it.'
+          },
+          {
+            heading: 'What IAR Offers Here',
+            body: 'A community that reflects where you're headed. People who have been in your shoes and kept going. Events and connections that reinforce the life you're building.'
+          }
+        ]
+      },
+      4: {
+        title: 'Powered by Purpose',
+        phase: 'Phase 04',
+        blocks: [
+          {
+            heading: 'What It Feels Like',
+            body: 'You start thinking less about yourself and more about others. Your story stops feeling like something to hide and starts feeling like something that could help someone else.'
+          },
+          {
+            heading: 'How To Move Through It',
+            body: 'Help at events, support new people as they come in, and be someone others can rely on when they're trying to figure things out.'
+          },
+          {
+            heading: 'What IAR Offers Here',
+            body: 'Opportunities to serve. Volunteer roles, mentoring, and ways to put your experience to use for the people just getting started.'
+          }
+        ]
+      },
+      5: {
+        title: 'We Are What Comes After',
+        phase: 'Phase 05',
+        blocks: [
+          {
+            heading: 'What It Feels Like',
+            body: 'You've become someone others look to. Your story is no longer just yours — it's a living example of what's possible. You carry the mission.'
+          },
+          {
+            heading: 'How To Move Through It',
+            body: 'Represent IAR at events, step into opportunities to speak on behalf of the mission, and take on roles where you help lead and support the community.'
+          },
+          {
+            heading: 'What IAR Offers Here',
+            body: 'Leadership paths, speaking opportunities, and a platform for your story to reach people who need it. You become part of what makes this work.'
+          }
+        ]
+      }
+    };
+    </script>
   </div>
 </div>
 
@@ -203,7 +299,7 @@
       <ul>
         <li><a href="get-involved.html#story">Submit Your Story</a></li>
         <li><a href="get-involved.html#speaking">Book Shawn</a></li>
-        <li><a href="get-involved.html#contact">Contact</a></li>
+        <li><a href="get-involved.html#partner">Contact</a></li>
       </ul>
     </div>
   </div>
