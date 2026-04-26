@@ -46,16 +46,16 @@ const phaseContent = {
       <div class="stand-detail-block"><h4>How to Move Through It</h4><p>A good place to start is by listening to the IAR Podcast, hearing how others have gone through it, and joining a peer group so you can get connected and not feel like you're figuring it out on your own.</p></div>`,
   2: `<div class="stand-detail-block"><h4>What This Looks Like</h4><p>Knowing what needs to change but still struggling to follow through, falling back into old habits, or avoiding the things you know you need to do because they're uncomfortable.</p></div>
       <div class="stand-detail-block"><h4>What to Work Towards</h4><p>Choosing to show up even when it's hard, building structure into your day, and starting to hold yourself accountable for what you said you'd do.</p></div>
-      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>Showing up to IAR runs, committing to the 60-day challenge, and being around people who are doing the work too.</p></div>`,
+      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>Showing up to community runs, doing something active even when you don't feel like it, and being around people who are doing the work too.</p></div>`,
   3: `<div class="stand-detail-block"><h4>What This Looks Like</h4><p>Things start to feel different. You're showing up more consistently, your habits are changing, and the way you handle things isn't the same as it used to be.</p></div>
       <div class="stand-detail-block"><h4>What to Work Towards</h4><p>It becomes about taking ownership, staying consistent even when no one is watching, and building an identity around how you show up every day.</p></div>
-      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>This can mean continuing to show up to runs and community events, staying involved, and surrounding yourself with people who are living the same way.</p></div>`,
+      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>Keep showing up to community events, stay involved, and surround yourself with people who are living the same way and will hold you to it.</p></div>`,
   4: `<div class="stand-detail-block"><h4>What This Looks Like</h4><p>The focus starts to shift beyond just you. You're still showing up for yourself, but you're also thinking about how you can support others and be part of something bigger.</p></div>
       <div class="stand-detail-block"><h4>What to Work Towards</h4><p>It becomes about stepping up, taking initiative, and using what you've built to have an impact on the people around you.</p></div>
-      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>This can mean helping at events, supporting new people as they come in, and being someone others can rely on.</p></div>`,
+      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>Help at events, support new people as they come in, and be someone others can rely on when they're trying to figure things out.</p></div>`,
   5: `<div class="stand-detail-block"><h4>What This Looks Like</h4><p>People start to notice it. The way you carry yourself, how you show up, and the consistency behind it. Others naturally look to you because you've put the work in and stayed with it.</p></div>
       <div class="stand-detail-block"><h4>What to Work Towards</h4><p>It becomes about holding a standard, staying consistent long term, and being someone others can rely on within the community.</p></div>
-      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>This can mean representing IAR at events, speaking and sharing your story, or stepping into roles where you're helping lead and support the community.</p></div>`
+      <div class="stand-detail-block"><h4>How to Move Through It</h4><p>Represent IAR at events, step into opportunities to speak on behalf of the mission, and take on roles where you help lead and support the community.</p></div>`
 };
 
 let activePhase = null;
