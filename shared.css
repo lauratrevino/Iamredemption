@@ -115,15 +115,15 @@ nav#top-nav {
 
 /* ── PAGE HERO (inner pages) ── */
 .page-hero {
-  position: relative; padding: 2.5rem 2.5rem 2.5rem;
-  min-height: 55vh; display: flex; align-items: flex-end;
+  position: relative; padding: 5rem 2.5rem 2.5rem;
+  min-height: 55vh; display: flex; align-items: flex-start;
   overflow: hidden;
   margin-top: 86px;
 }
 .page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: top center; filter: brightness(0.6); }
 .page-hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(15,15,15,0.7) 0%, rgba(10,10,10,0.08) 50%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(10,10,10,0.65) 0%, rgba(10,10,10,0.15) 50%, transparent 100%);
 }
 .page-hero-content { position: relative; max-width: 780px; }
 .page-hero-eyebrow {
@@ -464,7 +464,7 @@ textarea.form-field { resize: vertical; }
   .img-stack { height: 280px; }
   .content-section { padding: 3rem 1.25rem; }
   .hero { padding: 80px 1.25rem 2rem; min-height: 65vh; }
-  .page-hero { padding: 80px 1.25rem 2rem; }
+  .page-hero { padding: 4rem 1.25rem 2rem; }
   .form-row { grid-template-columns: 1fr; }
   .episode-grid { grid-template-columns: 1fr 1fr; }
   .hero h1 { font-size: clamp(38px, 9vw, 64px); white-space: normal; }
@@ -488,7 +488,7 @@ textarea.form-field { resize: vertical; }
   .platform-link { font-size: 12px; padding: 0.4rem 0.8rem; }
   .content-section { padding: 2.5rem 1rem; }
   .hero { padding: 80px 1rem 2rem; }
-  .page-hero { padding: 80px 1rem 2rem; }
+  .page-hero { padding: 4rem 1rem 2rem; }
   .email-bar { padding: 1.5rem 1rem; }
   .email-bar-inner { gap: 1.25rem; }
   .email-input, .email-btn { width: 100%; }
