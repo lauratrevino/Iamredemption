@@ -103,9 +103,9 @@
       <script>window.jotformEmbedHandler("iframe[id='260924104080043']", "https://form.jotform.com/")</script>
       <a class="btn lightbox-260924104080043" style="margin-top:16px;text-transform:uppercase;font-size:14px;text-decoration:none;cursor:pointer;display:inline-block;padding:10px 20px;font-family:inherit;text-shadow:none;user-select:none;transition:all .1s ease-in;background-color:#fdbf12;border:1px solid #fdbf12;color:#000000;font-weight:700;letter-spacing:0.1em;">Volunteer With Us</a>
     </div>
-    <div class="fade-in fade-in-d1" style="position:relative;">
-      <img src="volunteer1.png" alt="IAR Volunteers" style="width:75%;display:block;border-top:3px solid var(--gold);margin-left:auto;">
-      <img src="volunteer2.png" alt="IAR Community Volunteers" style="width:75%;display:block;border-top:3px solid var(--gold);margin-top:-2rem;margin-left:auto;box-shadow:8px 8px 0 rgba(253,191,18,0.2);">
+    <div class="fade-in fade-in-d1" style="position:relative;min-height:420px;">
+      <img src="volunteer1.png" alt="IAR Volunteers" style="width:65%;aspect-ratio:4/3;object-fit:cover;display:block;border-top:3px solid var(--gold);position:absolute;top:0;left:0;border-radius:2px;">
+      <img src="volunteer2.png" alt="IAR Community Volunteers" style="width:65%;aspect-ratio:4/3;object-fit:cover;display:block;border-top:3px solid var(--gold);position:absolute;top:30px;left:30px;box-shadow:8px 8px 0 rgba(253,191,18,0.2);border-radius:2px;">
     </div>
   </div>
 </section>
@@ -122,18 +122,20 @@
     </div>
     <div class="story-form-wrap fade-in fade-in-d1">
       <h3 style="font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:0.05em;color:var(--white);margin-bottom:1.5rem;">Share Your Story</h3>
-      <div class="story-form">
+      <form class="story-form" id="story-form" onsubmit="submitStoryFormspree(event)">
+        <input type="hidden" name="form_type" value="Share Your Story">
         <div class="form-row">
-          <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-field" placeholder="Your name or anonymous"></div>
-          <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-field" placeholder="We'll reach out privately"></div>
+          <div class="form-group"><label class="form-label">First Name</label><input type="text" name="name" class="form-field" placeholder="Your name or anonymous"></div>
+          <div class="form-group"><label class="form-label">Email</label><input type="email" name="email" class="form-field" placeholder="We'll reach out privately"></div>
         </div>
         <div class="form-group">
           <label class="form-label">Your Story</label>
-          <textarea class="form-field" rows="6" placeholder="Tell us what happened. Where you were, what changed, where you are now. Don't edit yourself. We want the real version."></textarea>
+          <textarea name="story" class="form-field" rows="6" placeholder="Tell us what happened. Where you were, what changed, where you are now. Don't edit yourself. We want the real version."></textarea>
         </div>
         <div class="form-privacy">Your story is treated with care. We never share without permission.</div>
-        <button class="btn-primary" style="width:100%;border:none;font-size:15px;margin-top:0.25rem;" onclick="submitStory()">Submit My Story</button>
-      </div>
+        <button type="submit" class="btn-primary" style="width:100%;border:none;font-size:15px;margin-top:0.25rem;">Submit My Story</button>
+        <div id="story-success" style="display:none;margin-top:1rem;color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:0.1em;font-size:15px;border-top:2px solid var(--gold);padding-top:1rem;">Thank you for sharing your story. We'll review it and reach out soon.</div>
+      </form>
     </div>
   </div>
 </section>
@@ -145,21 +147,23 @@
       <div class="section-label">EVERYTHING ELSE</div>
       <h2 class="section-title">Contact Us</h2>
       <p style="color:#e0e0e0;font-weight:300;line-height:1.8;margin-bottom:2.5rem;">For partnerships, general questions, or booking Shawn, send us a message.</p>
-      <div class="story-form" id="contact-form">
+      <form class="story-form" id="contact-form" onsubmit="submitContactFormspree(event)">
+        <input type="hidden" name="form_type" value="Contact Us">
         <div class="form-group">
           <label class="form-label">I'M CONTACTING ABOUT</label>
-          <select class="form-field" id="contacting-about-select">
+          <select name="topic" class="form-field" id="contacting-about-select">
             <option value="">Select a topic</option>
             <option>Partnership</option>
             <option>General Question</option>
             <option>Booking Shawn</option>
           </select>
         </div>
-        <div class="form-group"><label class="form-label">NAME</label><input type="text" class="form-field" placeholder="Your name"></div>
-        <div class="form-group"><label class="form-label">EMAIL</label><input type="email" class="form-field" placeholder="Your email address"></div>
-        <div class="form-group"><label class="form-label">MESSAGE</label><textarea class="form-field" rows="5" placeholder="How can we help?"></textarea></div>
-        <button class="btn-primary" style="width:100%;border:none;font-size:15px;margin-top:0.5rem;" onclick="submitContact()">SEND MESSAGE</button>
-      </div>
+        <div class="form-group"><label class="form-label">NAME</label><input type="text" name="name" class="form-field" placeholder="Your name"></div>
+        <div class="form-group"><label class="form-label">EMAIL</label><input type="email" name="email" class="form-field" placeholder="Your email address"></div>
+        <div class="form-group"><label class="form-label">MESSAGE</label><textarea name="message" class="form-field" rows="5" placeholder="How can we help?"></textarea></div>
+        <button type="submit" class="btn-primary" style="width:100%;border:none;font-size:15px;margin-top:0.5rem;">SEND MESSAGE</button>
+        <div id="contact-success" style="display:none;margin-top:1rem;color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:0.1em;font-size:15px;border-top:2px solid var(--gold);padding-top:1rem;">Message sent! We'll get back to you soon.</div>
+      </form>
     </div>
     <div class="fade-in fade-in-d1" style="padding-top:3rem;">
       <div class="impact-aside">
@@ -180,10 +184,12 @@
       <h3>Stay Connected</h3>
       <p>Stories and community updates.</p>
     </div>
-    <div class="email-bar-form">
-      <input type="email" class="email-input" placeholder="Enter your email address">
-      <button class="email-btn" onclick="subscribeEmail()">Subscribe</button>
+    <div class="email-bar-form" id="email-bar-form-involved">
+      <input type="hidden" name="form_type" value="Email Subscription">
+      <input type="email" class="email-input" id="email-input-involved" placeholder="Enter your email address">
+      <button class="email-btn" onclick="submitEmailBar('involved')">Subscribe</button>
     </div>
+    <div id="email-bar-success-involved" style="display:none;color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:0.1em;font-size:15px;">Thanks for subscribing!</div>
   </div>
 </div>
 

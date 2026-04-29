@@ -25,18 +25,76 @@ function toggleMenu() {
   }
 }
 
-// ── EMAIL SUBSCRIBE ──
-function subscribeEmail() {
-  const input = document.querySelector('.email-input');
-  const btn = document.querySelector('.email-btn');
+// ── EMAIL SUBSCRIBE (Formspree) ──
+async function submitEmailBar(suffix) {
+  const input = document.getElementById('email-input-' + suffix);
+  const btn = input ? input.parentElement.querySelector('.email-btn') : null;
+  const successDiv = document.getElementById('email-bar-success-' + suffix);
   if (!input || !input.value.includes('@')) {
     if (input) input.style.borderColor = '#b83232';
     return;
   }
-  btn.textContent = 'Thanks!';
-  btn.style.background = '#3b6d11';
-  input.value = '';
-  setTimeout(() => { btn.textContent = 'Subscribe'; btn.style.background = ''; }, 3000);
+  if (btn) { btn.textContent = 'Sending...'; btn.disabled = true; }
+  try {
+    const formData = new FormData();
+    formData.append('email', input.value);
+    formData.append('form_type', 'Email Subscription');
+    const res = await fetch('https://formspree.io/f/mzdylgwk', { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
+    if (res.ok) {
+      if (input.parentElement) input.parentElement.style.display = 'none';
+      if (successDiv) successDiv.style.display = 'block';
+    } else {
+      if (btn) { btn.textContent = 'Try Again'; btn.disabled = false; }
+    }
+  } catch(e) {
+    if (btn) { btn.textContent = 'Try Again'; btn.disabled = false; }
+  }
+}
+// Legacy alias
+function subscribeEmail() { submitEmailBar('index'); }
+
+// ── STORY FORM (Formspree) ──
+async function submitStoryFormspree(e) {
+  e.preventDefault();
+  const form = document.getElementById('story-form');
+  const btn = form ? form.querySelector('button[type="submit"]') : null;
+  const successDiv = document.getElementById('story-success');
+  if (btn) { btn.textContent = 'Sending...'; btn.disabled = true; }
+  try {
+    const data = new FormData(form);
+    const res = await fetch('https://formspree.io/f/mzdylgwk', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+    if (res.ok) {
+      form.querySelectorAll('input:not([type=hidden]),textarea,select').forEach(el => el.value = '');
+      if (successDiv) successDiv.style.display = 'block';
+      if (btn) { btn.textContent = 'Submitted!'; }
+    } else {
+      if (btn) { btn.textContent = 'Error — Try Again'; btn.disabled = false; }
+    }
+  } catch(e) {
+    if (btn) { btn.textContent = 'Error — Try Again'; btn.disabled = false; }
+  }
+}
+
+// ── CONTACT FORM (Formspree) ──
+async function submitContactFormspree(e) {
+  e.preventDefault();
+  const form = document.getElementById('contact-form');
+  const btn = form ? form.querySelector('button[type="submit"]') : null;
+  const successDiv = document.getElementById('contact-success');
+  if (btn) { btn.textContent = 'Sending...'; btn.disabled = true; }
+  try {
+    const data = new FormData(form);
+    const res = await fetch('https://formspree.io/f/mzdylgwk', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+    if (res.ok) {
+      form.querySelectorAll('input:not([type=hidden]),textarea,select').forEach(el => el.value = '');
+      if (successDiv) successDiv.style.display = 'block';
+      if (btn) { btn.textContent = 'Sent!'; }
+    } else {
+      if (btn) { btn.textContent = 'Error — Try Again'; btn.disabled = false; }
+    }
+  } catch(e) {
+    if (btn) { btn.textContent = 'Error — Try Again'; btn.disabled = false; }
+  }
 }
 
 // ── PHASES ──

@@ -93,7 +93,7 @@
 </style>
 <script>
 (function() {
-  const heroImgs = ['hero1.jpg','hero2.jpg','hero3.jpg','hero4.jpg','hero5.jpg'];
+  const heroImgs = ['hero1.jpg','hero2.jpg','hero3.jpg','hero5.jpg'];
   let idx = 0;
   const el = document.getElementById('hero-carousel');
   if (el) {
@@ -107,7 +107,7 @@
 </script>
 
 <!-- MISSION STRIP -->
-<section class="mission-strip" style="padding:5rem 2.5rem;">
+<section class="mission-strip" style="padding:3.5rem 2.5rem;">
   <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
     <div class="mission-text fade-in">
       <div class="section-label">Our Mission</div>
@@ -119,7 +119,7 @@
     </div>
     <div class="mission-images fade-in fade-in-d2">
       <div style="position:relative;">
-        <img src="https://images.squarespace-cdn.com/content/v1/65440d9b96a095033228c2f3/6e744e41-7d75-4bb2-8646-0f9686bcde8e/602893532_17954290437028615_1809779032490499039_n.jpg" alt="Community run" style="width:80%;display:block;border-top:3px solid var(--gold);margin-left:auto;">
+        <img src="graffiti.jpeg" alt="Community run" style="width:80%;display:block;border-top:3px solid var(--gold);margin-left:auto;">
         <img src="our_mission.png" alt="I Am Redemption Mission" style="width:80%;display:block;border-top:3px solid var(--gold);margin-right:auto;margin-top:-3rem;box-shadow:8px 8px 0 rgba(253,191,18,0.25);">
       </div>
     </div>
@@ -146,7 +146,7 @@
              youtube.com/watch?v=XXXX on the film's official channel. -->
         <iframe
           id="trailer-iframe"
-          src="https://www.youtube.com/embed/tDz6q9JNO6c?rel=0&modestbranding=1"
+          src="https://www.youtube.com/embed/WZMXlzKLKEw?rel=0&modestbranding=1"
           title="100 Miles to Redemption — Official Trailer"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
@@ -169,10 +169,12 @@
       <h3>Stay Connected</h3>
       <p>Stories and community updates.</p>
     </div>
-    <div class="email-bar-form">
-      <input type="email" class="email-input" placeholder="Enter your email address">
-      <button class="email-btn" onclick="subscribeEmail()">Subscribe</button>
+    <div class="email-bar-form" id="email-bar-form-index">
+      <input type="hidden" name="form_type" value="Email Subscription">
+      <input type="email" class="email-input" id="email-input-index" placeholder="Enter your email address">
+      <button class="email-btn" onclick="submitEmailBar('index')">Subscribe</button>
     </div>
+    <div id="email-bar-success-index" style="display:none;color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:0.1em;font-size:15px;">Thanks for subscribing!</div>
   </div>
 </div>
 

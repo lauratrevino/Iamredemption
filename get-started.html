@@ -149,9 +149,9 @@
   <!-- Platform Links -->
   <div class="platform-links fade-in" style="margin-top:1.5rem;">
     <a href="https://www.youtube.com/@IAm.Redemption/videos" target="_blank" class="platform-link">YouTube</a>
-    <a href="https://open.spotify.com/show/44F8FHatPeGC0FcFT6gMmS" target="_blank" class="platform-link">Spotify</a>
-    <a href="https://podcasts.apple.com/us/podcast/i-am-redemption-podcast/id1719303836" target="_blank" class="platform-link">Apple Podcasts</a>
-    <a href="https://podcast.ausha.co/i-am-redemption-podcast" target="_blank" class="platform-link">All Episodes</a>
+    <a href="https://open.spotify.com/show/0Y1dkGgBbtHcCc6RVfHRoU" target="_blank" class="platform-link">Spotify</a>
+    <a href="https://podcasts.apple.com/us/podcast/i-am-redemption/id1895738531" target="_blank" class="platform-link">Apple Podcasts</a>
+    <a href="https://www.iheart.com/podcast/1323-i-am-redemption-331846972" target="_blank" class="platform-link">iHeart</a>
   </div>
   </div>
 
@@ -188,7 +188,7 @@
       <a href="get-involved.html#partner" class="btn-primary">Book Shawn</a>
     </div>
     <div class="fade-in fade-in-d1">
-      <img src="hero1.png" alt="Shawn Livingston speaking" style="width:100%;display:block;">
+      <img src="ShawnSpeaking.jpeg" alt="Shawn Livingston speaking" style="width:100%;display:block;">
     </div>
   </div>
 </section>
@@ -199,10 +199,12 @@
       <h3>Stay Connected</h3>
       <p>Stories and community updates.</p>
     </div>
-    <div class="email-bar-form">
-      <input type="email" class="email-input" placeholder="Enter your email address">
-      <button class="email-btn" onclick="subscribeEmail()">Subscribe</button>
+    <div class="email-bar-form" id="email-bar-form-getstarted">
+      <input type="hidden" name="form_type" value="Email Subscription">
+      <input type="email" class="email-input" id="email-input-getstarted" placeholder="Enter your email address">
+      <button class="email-btn" onclick="submitEmailBar('getstarted')">Subscribe</button>
     </div>
+    <div id="email-bar-success-getstarted" style="display:none;color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:0.1em;font-size:15px;">Thanks for subscribing!</div>
   </div>
 </div>
 

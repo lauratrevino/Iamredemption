@@ -262,10 +262,12 @@
       <h3>Stay Connected</h3>
       <p>Stories and community updates.</p>
     </div>
-    <div class="email-bar-form">
-      <input type="email" class="email-input" placeholder="Enter your email address">
-      <button class="email-btn" onclick="subscribeEmail()">Subscribe</button>
+    <div class="email-bar-form" id="email-bar-form-wys">
+      <input type="hidden" name="form_type" value="Email Subscription">
+      <input type="email" class="email-input" id="email-input-wys" placeholder="Enter your email address">
+      <button class="email-btn" onclick="submitEmailBar('wys')">Subscribe</button>
     </div>
+    <div id="email-bar-success-wys" style="display:none;color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:0.1em;font-size:15px;">Thanks for subscribing!</div>
   </div>
 </div>
 

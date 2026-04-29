@@ -142,7 +142,7 @@ nav#top-nav {
 .hero {
   position: relative; min-height: 75vh;
   display: flex; flex-direction: column; justify-content: flex-start;
-  padding: 2.5rem 2.5rem 3rem; overflow: hidden;
+  padding: 1.5rem 2.5rem 2rem; overflow: hidden;
   margin-top: 86px;
 }
 .hero-bg {
@@ -227,7 +227,7 @@ nav#top-nav {
 }
 
 /* ── EMAIL BAR ── */
-.email-bar { background: #161616; border-top: 2px solid var(--gold); padding: 3.5rem 2.5rem; }
+.email-bar { background: #161616; border-top: 2px solid var(--gold); padding: 1.5rem 2.5rem; }
 .email-bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 3rem; max-width: 920px; margin: 0 auto; flex-wrap: wrap; }
 .email-bar-text h3 { font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: 0.05em; color: var(--white); margin-bottom: 0.3rem; }
 .email-bar-text p { font-size: 15px; font-weight: 300; color: var(--lighter-gray); }
@@ -375,7 +375,7 @@ footer {
 .ep-card:hover .ep-cta { gap:10px; }
 
 /* ── CHALLENGE SECTION ── */
-.challenge-section { background: var(--gold); padding: 5.5rem 2.5rem; }
+.challenge-section { background: var(--gold); padding: 3.5rem 2.5rem; }
 .challenge-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; max-width: var(--max-w); margin: 0 auto; }
 .challenge-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(52px, 7vw, 92px); line-height: 0.88; letter-spacing: 0.02em; color: #000; margin-bottom: 1.35rem; }
 .challenge-text p { font-size: 16.5px; color: rgba(0,0,0,0.7); line-height: 1.8; margin-bottom: 0.85rem; }
@@ -390,7 +390,7 @@ footer {
 .challenge-submit:hover { background: #1a1a1a; transform: translateY(-1px); }
 
 /* ── STORY FORM ── */
-.story-section { background: var(--black); padding: 5.5rem 2.5rem; }
+.story-section { background: var(--black); padding: 3.5rem 2.5rem; }
 .story-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start; max-width: var(--max-w); margin: 0 auto; }
 .story-form-wrap { background: var(--dark-gray); padding: 2.75rem; border-top: 3px solid var(--gold); }
 .story-form { display: flex; flex-direction: column; gap: 1.1rem; }
@@ -489,7 +489,7 @@ textarea.form-field { resize: vertical; }
   .content-section { padding: 2.5rem 1rem; }
   .hero { padding: 80px 1rem 2rem; }
   .page-hero { padding: 80px 1rem 2rem; }
-  .email-bar { padding: 2.5rem 1rem; }
+  .email-bar { padding: 1.5rem 1rem; }
   .email-bar-inner { gap: 1.25rem; }
   .email-input, .email-btn { width: 100%; }
   .email-bar-form { display: flex; flex-direction: column; gap: 0.5rem; }
