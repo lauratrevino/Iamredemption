@@ -87,22 +87,34 @@
   </div>
 </section>
 <style>
-#hero-carousel {
-  transition: background-image 1.2s ease-in-out;
+#hero-carousel { background: #0a0a0a; }
+.hero-slide {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: top center;
+  filter: brightness(0.6);
+  opacity: 0; transition: opacity 1.2s ease-in-out;
 }
+.hero-slide.active { opacity: 1; }
 </style>
 <script>
 (function() {
   const heroImgs = ['hero1.jpg','hero2.jpg','hero3.jpg','hero5.jpg'];
-  let idx = 0;
   const el = document.getElementById('hero-carousel');
-  if (el) {
-    el.style.backgroundImage = "url('" + heroImgs[0] + "')";
-    setInterval(function() {
-      idx = (idx + 1) % heroImgs.length;
-      el.style.backgroundImage = "url('" + heroImgs[idx] + "')";
-    }, 5000);
-  }
+  if (!el) return;
+  // Build one div per image — stacked, cross-fading
+  const slides = heroImgs.map(function(src, i) {
+    const d = document.createElement('div');
+    d.className = 'hero-slide' + (i === 0 ? ' active' : '');
+    d.style.backgroundImage = "url('" + src + "')";
+    el.appendChild(d);
+    return d;
+  });
+  let idx = 0;
+  setInterval(function() {
+    slides[idx].classList.remove('active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('active');
+  }, 5000);
 })();
 </script>
 
