@@ -286,10 +286,7 @@ footer {
 
 /* ── MOBILE BOTTOM NAV ── */
 .mobile-bottom-nav {
-  display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
-  background: rgba(8,8,8,0.98); backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(253,191,18,0.2);
-  justify-content: space-around;
+  display: none !important;
 }
 .mbn-item { display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; padding: 0.55rem 0.75rem; color: #888; transition: color 0.2s; flex: 1; }
 .mbn-item:hover, .mbn-item.active { color: var(--gold); }

@@ -21,7 +21,7 @@ function toggleMenu() {
   if (links.style.display === 'flex') {
     links.style.display = 'none';
   } else {
-    links.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:58px;left:0;right:0;background:rgba(18,34,8,0.99);padding:1.5rem 2rem;gap:1.25rem;z-index:999;border-bottom:1px solid rgba(200,151,58,0.2);';
+    links.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:58px;left:0;right:0;background:rgba(10,10,10,0.99);padding:1.5rem 2rem;gap:1.25rem;z-index:999;border-bottom:1px solid rgba(200,151,58,0.2);';
   }
 }
 
