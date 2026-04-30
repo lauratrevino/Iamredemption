@@ -11,7 +11,7 @@ setTimeout(() => {
 // ── NAV SCROLL SHRINK ──
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('top-nav');
-  if (nav) nav.style.height = window.scrollY > 60 ? '48px' : '64px';
+  if (nav) nav.style.padding = window.scrollY > 60 ? '0.4rem 2rem' : '0.75rem 2rem';
 }, { passive: true });
 
 // ── MOBILE MENU ──
