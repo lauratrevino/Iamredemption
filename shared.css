@@ -88,18 +88,18 @@ nav#top-nav {
   display: grid; grid-template-columns: 1fr 144px 1fr;
   align-items: center;
   padding: 0 2rem;
-  height: 52px;
+  height: 64px;
   background: rgba(0,0,0,0.98); backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(253,191,18,0.18);
   transition: height 0.3s;
+  overflow: visible;
 }
-/* Logo floats over the nav bar — out of flow */
+/* Logo floats centered over the bar, hanging down onto the hero */
 .nav-logo-group {
   grid-column: 2;
   display: flex; justify-content: center; align-items: flex-start;
   position: relative; z-index: 1001;
-  /* Push logo up so it overhangs the bar and drops onto the hero */
-  margin-top: -60px;
+  margin-top: 0;
   pointer-events: none;
 }
 .nav-logo {
@@ -110,6 +110,7 @@ nav#top-nav {
 .nav-logo img {
   height: 144px; width: auto;
   filter: drop-shadow(0 4px 16px rgba(0,0,0,0.7));
+  margin-top: -20px;
 }
 .nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
 .nav-links-left  { justify-content: flex-end;   grid-column: 1; }
@@ -127,7 +128,7 @@ nav#top-nav {
   font-family: 'Barlow Condensed', sans-serif; font-size: 16px;
   font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase;
   color: #c0c0c0; text-decoration: none; transition: color 0.2s;
-  padding-right: 1.25rem; line-height: 52px;
+  padding-right: 1.25rem; line-height: 64px;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--gold); }
 .nav-cta {
@@ -178,7 +179,7 @@ nav#top-nav {
   position: relative; min-height: 75vh;
   display: flex; flex-direction: column; justify-content: flex-start;
   padding: 8rem 2.5rem 2rem; overflow: hidden;
-  margin-top: 52px;
+  margin-top: 64px;
 }
 .hero-bg {
   position: absolute; inset: 0;
