@@ -16,12 +16,20 @@ window.addEventListener('scroll', () => {
 
 // ── MOBILE MENU ──
 function toggleMenu() {
-  const links = document.querySelector('#top-nav .nav-links');
+  const leftLinks = document.querySelector('#top-nav .nav-links-left');
+  const rightLinks = document.querySelector('#top-nav .nav-links-right');
+  const links = leftLinks || rightLinks;
   if (!links) return;
-  if (links.style.display === 'flex') {
-    links.style.display = 'none';
+  const isOpen = leftLinks && leftLinks.style.display === 'flex';
+  const mobileStyle = 'display:flex;flex-direction:column;position:fixed;left:0;right:0;background:rgba(10,10,10,0.99);padding:1.5rem 2rem;gap:1.25rem;z-index:999;border-bottom:1px solid rgba(200,151,58,0.2);';
+  if (isOpen) {
+    if (leftLinks) leftLinks.style.display = 'none';
+    if (rightLinks) rightLinks.style.display = 'none';
   } else {
-    links.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:58px;left:0;right:0;background:rgba(10,10,10,0.99);padding:1.5rem 2rem;gap:1.25rem;z-index:999;border-bottom:1px solid rgba(200,151,58,0.2);';
+    // Stack left links first, right links below
+    const navBottom = (document.getElementById('top-nav') || {}).offsetBottom || 92;
+    if (leftLinks) { leftLinks.style.cssText = mobileStyle + 'top:92px;'; }
+    if (rightLinks) { rightLinks.style.cssText = mobileStyle + 'top:' + (leftLinks ? leftLinks.offsetHeight + 92 : 92) + 'px;'; }
   }
 }
 
